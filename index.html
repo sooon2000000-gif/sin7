@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>تحضير العلوم - الصف السابع - الفصل الدراسي الأول</title>
+<style>
+:root{--bg:#f4f7fb;--paper:#fff;--ink:#152033;--muted:#657085;--line:#dfe5ee;--accent:#0f6d63;--accent2:#0b554e;--soft:#eaf6f3;--warn:#fff6df}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,"Noto Sans Arabic",sans-serif;line-height:1.9;text-align:right}
+button,select,input{font:inherit}
+.topbar{background:linear-gradient(135deg,#0d5f58,#0f766e);color:#fff;padding:24px 18px;box-shadow:0 3px 16px #0002}
+.topbar .wrap{max-width:1180px;margin:auto}
+h1{margin:0;font-size:clamp(1.45rem,3vw,2.15rem)}
+.subtitle{margin:4px 0 0;opacity:.92}
+.controls{max-width:1180px;margin:18px auto;padding:16px;background:#fff;border:1px solid var(--line);border-radius:16px;display:grid;grid-template-columns:1fr 1fr auto auto;gap:12px;align-items:end;box-shadow:0 6px 22px #1b33520c;position:sticky;top:10px;z-index:10}
+.control label{display:block;font-weight:700;margin-bottom:5px}
+select{width:100%;padding:10px 12px;border:1px solid #c9d2df;border-radius:10px;background:#fff;color:var(--ink)}
+.nav-btn{border:1px solid #b7c7d7;background:#fff;color:#24435c;border-radius:10px;padding:10px 14px;cursor:pointer;white-space:nowrap}
+.nav-btn:hover{background:#f3f7fa}
+main{max-width:1180px;margin:0 auto 70px;padding:0 16px}
+.lesson-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 30px #1b335210}
+.lesson-titlebar{padding:20px 22px;background:#f9fbfc;border-bottom:1px solid var(--line);display:flex;gap:18px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.unit-kicker{display:block;color:var(--accent);font-weight:700;font-size:.92rem}
+h2{margin:3px 0 0;font-size:1.5rem}
+.lesson-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.duration{background:var(--soft);color:var(--accent2);padding:7px 11px;border-radius:999px;font-weight:700}
+.copy-all,.copy-btn{border:0;background:var(--accent);color:white;border-radius:9px;padding:8px 13px;cursor:pointer;font-weight:700}
+.copy-all:hover,.copy-btn:hover{background:var(--accent2)}
+.noor-section{margin:18px 20px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;background:#f7f9fb;border-bottom:1px solid var(--line)}
+h3{margin:0;font-size:1.05rem;color:#22344a}
+.copy-btn{font-size:.9rem;padding:6px 11px;white-space:nowrap}
+.copy-content{padding:14px 18px;white-space:normal;word-break:normal;overflow-wrap:break-word}
+.copy-content p{margin:.2rem 0 .75rem}
+ul,ol{margin:.3rem 0;padding-right:1.45rem}
+li{margin:.35rem 0}
+.steps{list-style:none;padding:0;counter-reset:step}
+.steps li{counter-increment:step;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:9px 0;border-bottom:1px dashed #e3e8ef}
+.steps li:last-child{border-bottom:0}
+.steps li>span:last-child:before{content:counter(step, arabic-indic) ". ";font-weight:700;color:var(--accent)}
+.time-pill{display:inline-block;background:#eef4f7;border:1px solid #d7e0e7;border-radius:999px;padding:2px 9px;font-weight:700;color:#30495d;white-space:nowrap}
+.total-time{margin-top:10px!important;padding:8px 11px;background:var(--soft);border-radius:9px;color:var(--accent2)}
+.time-note{font-size:.94rem;color:#4d5f72;background:#fafbfc;padding:7px 10px;border-radius:8px}
+.level{background:#f7fbff;border-right:4px solid #78a7c6;padding:7px 10px;border-radius:6px}
+.toast{position:fixed;left:22px;bottom:22px;background:#172331;color:#fff;padding:10px 15px;border-radius:10px;box-shadow:0 8px 24px #0003;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s;z-index:50}
+.toast.show{opacity:1;transform:none}
+.empty{background:#fff;border:1px dashed #bdc8d4;border-radius:14px;padding:30px;text-align:center;color:var(--muted)}
+@media(max-width:760px){.controls{grid-template-columns:1fr;position:static;margin:12px}main{padding:0 10px}.noor-section{margin:12px 10px}.lesson-titlebar{padding:16px}.steps li{grid-template-columns:1fr}.time-pill{width:max-content}}
+@media print{.topbar,.controls,.copy-btn,.copy-all,.toast{display:none!important}body{background:#fff}main{max-width:none;padding:0}.lesson-card{box-shadow:none;border:0}.noor-section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap"><h1>تحضير العلوم - الصف السابع - الفصل الدراسي الأول</h1><p class="subtitle">تحضير وفق بنود منصة نور، وزمن كل حصة ٤٠ دقيقة.</p></div></header>
+<div class="controls" role="region" aria-label="اختيار الدرس">
+  <div class="control"><label for="unitSelect">الوحدة</label><select id="unitSelect"><option value="1">الوحدة الأولى: النباتات والإنسان ككائنات حية</option><option value="2">الوحدة الثانية: حالات المادة</option><option value="3">الوحدة الثالثة: الطاقة</option></select></div>
+  <div class="control"><label for="lessonSelect">الدرس</label><select id="lessonSelect"></select></div>
+  <button type="button" class="nav-btn" id="prevBtn">السابق</button>
+  <button type="button" class="nav-btn" id="nextBtn">التالي</button>
+</div>
+<main>
+<article class="lesson-card" id="lesson-1" data-index="0" data-unit="1" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الأولى: النباتات والإنسان ككائنات حية</span><h2>١-١ - أعضاء النبات</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-1')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-1-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-1-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتطبيق وملاحظة علمية</p><ul><li>يحدد الأعضاء الرئيسة في النبات الزهري: الجذور والساق والأوراق والأزهار.</li><li>يربط كل عضو بوظيفته الأساسية في بقاء النبات ونموه.</li><li>يسجل ملاحظات دقيقة عن نبات أو ورقة نبات وفق النشاط المقرر.</li></ul></div>
+    </section><section class="noor-section" id="lesson-1-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-1-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>المناقشة الموجهة: تُستخدم صورة النبات وأسئلة كتاب الطالب لاستدعاء أسماء الأعضاء ووظائفها.</li><li>التعلم التعاوني: تعمل مجموعات صغيرة على مقارنة عينات نباتية وتبادل الملاحظات.</li><li>الاستقصاء بالملاحظة: ينفذ الطلاب نشاط ١-١ «ضغط نبات بين أوراق صحف» مع تسجيل الملاحظات.</li></ul></div>
+    </section><section class="noor-section" id="lesson-1-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-1-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم صورة النبات في كتاب الطالب ويطلب من الطلاب تسمية أكبر عدد من الأجزاء التي يعرفونها، ثم يربط إجاباتهم بما شاهدوه في نباتات البيئة المحلية دون إضافة أعضاء غير الواردة في الدرس.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-1-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-1-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة موجهة: يفتح الطلاب كتاب الطالب عند موضوع «أعضاء النبات»، ويتأملون صورة النبات والخريطة/الصورة المرتبطة بالغطاء النباتي، ثم يحددون شفهيًا الجذور والساق والأوراق والأزهار.</span></li><li><span class="time-pill">٨ دقائق</span><span>بناء المفهوم: يناقش المعلم مع الطلاب وظيفة كل عضو كما يعرضها كتاب الطالب؛ الجذور للتثبيت وامتصاص الماء، الساق للدعم والنقل، الأوراق لصنع الغذاء، والأزهار مرتبطة بالتكاثر. يجيب الطلاب عن الأسئلة المرتبطة بالنص بالتتابع.</span></li><li><span class="time-pill">١٥ دقائق</span><span>نشاط عملي: تنفذ المجموعات نشاط ١-١ «ضغط نبات بين أوراق صحف». يتبع الطلاب خطوات النشاط في كتاب الطالب، يرتبون العينة بين الأوراق بالطريقة المطلوبة، ويسجلون ما يلاحظونه عن شكل الأعضاء قبل الضغط.</span></li><li><span class="time-pill">٨ دقائق</span><span>تطبيق منظم: ينجز الطلاب من كتاب النشاط تمرين ١-١ «مقارنة أوراق النباتات»، ويقارنون صفات الأوراق كما يطلب التمرين، ثم تعرض مجموعتان نتائج المقارنة.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق وتقويم: يطلب المعلم من كل طالب تسمية عضو واحد ووظيفته، ثم يراجع سريعًا إجابات الأسئلة ١-٦ من كتاب الطالب التي تقيس تمييز الأعضاء والوظائف.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-1-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-1-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>سمِّ الأعضاء الرئيسة الأربعة في النبات الزهري.</li><li>ما وظيفة الجذور؟ وما وظيفة الأوراق؟</li><li>من تمرين ١-١ في كتاب النشاط: اذكر فرقًا واحدًا لاحظته بين ورقتين.</li><li>أكمل وصف العينة في نشاط ١-١ بذكر العضو الذي يحمل الأوراق والأزهار.</li></ul></div>
+    </section><section class="noor-section" id="lesson-1-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-1-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعيد الطلاب ترتيب: جذور ← ساق ← أوراق/أزهار على مخطط نبات، ثم يذكرون وظيفة كل جزء بجملة قصيرة؛ ويصحح المعلم أي خلط قبل إنهاء الحصة.</p></div>
+    </section><section class="noor-section" id="lesson-1-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-1-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ١-١ «مقارنة أوراق النباتات» إن لم يكتمل، ومراجعة الأسئلة ١-٦ من كتاب الطالب.</p></div>
+    </section><section class="noor-section" id="lesson-1-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-1-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: استخدام ورقة العمل ١-١ «أعضاء النبات» لتثبيت أسماء الأجزاء ووظائفها. الإثراء: مقارنة عيّنتين نباتيتين من النشاط وذكر أوجه التشابه والاختلاف المدعومة بالملاحظة فقط.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-2" data-index="1" data-unit="1" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الأولى: النباتات والإنسان ككائنات حية</span><h2>٢-١ - الأزهار</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-2')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-2-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-2-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتطبيق وملاحظة عملية</p><ul><li>يتعرف الأجزاء الرئيسة للزهرة في نموذج حقيقي أو صورة.</li><li>يميز الأجزاء المرتبطة بالتكاثر في الزهرة وفق ما يقدمه كتاب الطالب.</li><li>يقارن بين زهرتين اعتمادًا على الملاحظة المنظمة.</li></ul></div>
+    </section><section class="noor-section" id="lesson-2-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-2-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>الاستقصاء العملي: يفحص الطلاب زهرة وفق نشاط ٢-١ «استقصاء تركيب الأزهار».</li><li>التعلم التعاوني: تتقاسم المجموعة مهام الفحص والتسمية والتسجيل.</li><li>المقارنة: يطبق الطلاب تمرين ٢-١ «مقارنة بين زهرتين» من كتاب النشاط.</li></ul></div>
+    </section><section class="noor-section" id="lesson-2-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-2-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم زهرة أو صورة الزهرة في كتاب الطالب، ويسأل: ما الأجزاء التي يمكن تمييزها بالعين؟ ثم يثبت المصطلحات الواردة في الدرس فقط.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-2-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-2-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٤ دقائق</span><span>تهيئة: مراجعة سريعة لوظيفة الأزهار ضمن أعضاء النبات، ثم فتح كتاب الطالب على موضوع «الأزهار» وقراءة أسماء الأجزاء المعروضة.</span></li><li><span class="time-pill">٨ دقائق</span><span>شرح موجه: يحدد المعلم على الرسم/العينة أجزاء الزهرة التي يعرضها الكتاب، ويطلب من الطلاب تتبع كل جزء بأعينهم وذكر موقعه بالنسبة لبقية الأجزاء.</span></li><li><span class="time-pill">١٨ دقائق</span><span>نشاط عملي: تنفذ المجموعات نشاط ٢-١ «استقصاء تركيب الأزهار». يفحص الطلاب الزهرة خطوة بخطوة، يفصلون الأجزاء بالطريقة الموضحة إن كان ذلك جزءًا من النشاط، ثم يسجلون أسماء الأجزاء التي تمكنوا من التعرف إليها.</span></li><li><span class="time-pill">٦ دقائق</span><span>تطبيق: ينجز الطلاب تمرين ٢-١ «مقارنة بين زهرتين» من كتاب النشاط، ويركزون على الصفات المطلوبة في التمرين بدل الأوصاف العامة.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يجيب الطلاب عن السؤالين ١ و٢ في كتاب الطالب شفهيًا/كتابيًا، ثم يلخص طالب ترتيب الأجزاء التي فحصها في النشاط.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-2-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-2-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>حدد جزأين من أجزاء الزهرة على الرسم.</li><li>ما أوجه الشبه أو الاختلاف التي سجلتها في تمرين ٢-١ بين الزهرتين؟</li><li>أي جزء تعرفت إليه أثناء نشاط ٢-١؟ وما الدليل البصري الذي استخدمته؟</li></ul></div>
+    </section><section class="noor-section" id="lesson-2-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-2-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يطلب المعلم من الطلاب إغلاق الكتب ثم تسمية ثلاثة أجزاء للزهرة من الذاكرة، وبعدها يفتحون الكتاب للتحقق الذاتي.</p></div>
+    </section><section class="noor-section" id="lesson-2-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-2-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٢-١ «مقارنة بين زهرتين» ومراجعة السؤالين ١ و٢ من كتاب الطالب.</p></div>
+    </section><section class="noor-section" id="lesson-2-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-2-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: إعادة فحص الرسم في كتاب الطالب مع الإشارة إلى كل جزء وقراءته بصوت واضح. الإثراء: إعادة المقارنة في تمرين ٢-١ بصياغة جمل علمية قصيرة تصف التشابه والاختلاف.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-3" data-index="2" data-unit="1" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الأولى: النباتات والإنسان ككائنات حية</span><h2>٣-١ - التلقيح</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-3')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-3-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-3-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتطبيق واستخدام المجهر</p><ul><li>يشرح أن التلقيح يتضمن انتقال حبوب اللقاح إلى الجزء المناسب من الزهرة.</li><li>يميز بين انتقال حبوب اللقاح بواسطة الحشرات وبواسطة الرياح كما في أمثلة الدرس.</li><li>يستخدم المجهر استخدامًا منظمًا لملاحظة حبوب اللقاح في نشاط ٣-١.</li></ul></div>
+    </section><section class="noor-section" id="lesson-3-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-3-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>المناقشة الموجهة: مقارنة أمثلة التلقيح بالحشرات والرياح في كتاب الطالب.</li><li>الاستقصاء العملي: نشاط ٣-١ «فحص حبوب اللقاح».</li><li>التعلم بالأداء: استخدام ورقتي العمل ٣-١(أ) «استخدام المجهر» و٣-١(ب) «أجزاء المجهر» لتثبيت مهارات المجهر.</li></ul></div>
+    </section><section class="noor-section" id="lesson-3-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-3-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يطرح المعلم سؤالًا من سياق الكتاب: كيف تنتقل حبوب اللقاح من زهرة إلى أخرى؟ ويقبل التوقعات ثم يطلب الاستدلال من صور الدرس.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-3-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-3-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: مشاهدة صور/أمثلة التلقيح في كتاب الطالب، ثم تصنيف توقعات الطلاب إلى «بالحشرات» و«بالرياح» دون الحكم قبل قراءة الصفات.</span></li><li><span class="time-pill">٩ دقائق</span><span>بناء المفهوم: يقرأ الطلاب الفقرة الخاصة بالتلقيح، ويحددون معنى انتقال حبوب اللقاح والفرق بين الزهور التي تعتمد على الحشرات وتلك التي تعتمد على الرياح وفق صفاتها المعروضة.</span></li><li><span class="time-pill">١٦ دقائق</span><span>نشاط عملي: تنفيذ نشاط ٣-١ «فحص حبوب اللقاح». يراجع الطلاب قواعد استخدام المجهر من ورقة العمل ٣-١(أ)، ويتعرفون أجزاءه من ٣-١(ب)، ثم يضبطون العينة ويلاحظون حبوب اللقاح ويسجلون ملاحظاتهم/رسمهم كما يطلب النشاط.</span></li><li><span class="time-pill">٦ دقائق</span><span>تقويم تكويني: مناقشة الأسئلة ١-٤ في كتاب الطالب، مع مطالبة الطلاب بتبرير إجابة واحدة بالرجوع إلى صفة ظاهرة في زهرة أو حبوب لقاح.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يكتب كل طالب جملة تعريفية للتلقيح، ثم يذكر وسيلة واحدة لنقل حبوب اللقاح ومثال الصفة المرتبطة بها.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-3-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-3-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>عرّف التلقيح بجملة واحدة.</li><li>ما الفرق الذي يورده الدرس بين زهرة ملقحة بالحشرات وزهرة ملقحة بالرياح؟</li><li>في نشاط ٣-١: ما الذي شاهدته عند فحص حبوب اللقاح بالمجهر؟</li><li>من ورقة العمل ٣-١(ب): سمِّ جزأين من أجزاء المجهر استُخدما أثناء الفحص.</li></ul></div>
+    </section><section class="noor-section" id="lesson-3-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-3-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعود المعلم إلى السؤال الافتتاحي «كيف تنتقل حبوب اللقاح؟» ويطلب إجابتين محددتين من الطلاب مع دليل من الدرس.</p></div>
+    </section><section class="noor-section" id="lesson-3-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-3-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال الأسئلة ١-٤ من كتاب الطالب، ومراجعة ورقة العمل ٣-١(ب) «أجزاء المجهر».</p></div>
+    </section><section class="noor-section" id="lesson-3-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-3-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: إعادة ترتيب خطوات استخدام المجهر الواردة في ورقة العمل ٣-١(أ) ثم تطبيقها على صورة الجهاز. الإثراء: مقارنة ملاحظات حبوب اللقاح بين عينتين إذا كانت العينات في النشاط تسمح بذلك.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-4" data-index="3" data-unit="1" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الأولى: النباتات والإنسان ككائنات حية</span><h2>٤-١ - الإخصاب</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-4')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-4-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-4-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتسلسل علمي</p><ul><li>يصف ما يحدث بعد التلقيح وصولًا إلى الإخصاب وفق تسلسل الدرس.</li><li>يربط الإخصاب بتكون البذور داخل الزهرة/الثمرة كما يعرض الكتاب.</li><li>يفحص تركيب البذور وفق نشاط ٤-١.</li></ul></div>
+    </section><section class="noor-section" id="lesson-4-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-4-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>التسلسل السببي: ترتيب الأحداث من التلقيح إلى الإخصاب ثم تكون البذور.</li><li>الاستقصاء العملي: نشاط ٤-١ «استقصاء تركيب البذور».</li><li>فكر–زاوج–شارك: صياغة تفسير مختصر للعلاقة بين التلقيح والإخصاب.</li></ul></div>
+    </section><section class="noor-section" id="lesson-4-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-4-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يراجع الطلاب معنى التلقيح من الدرس السابق، ثم يسأل المعلم: ماذا يحدث لحبة اللقاح بعد وصولها إلى الزهرة؟ ويطلب البحث عن الإجابة في الشكل/النص.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-4-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-4-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة وربط قبلي: مراجعة تعريف التلقيح، ثم تتبع الأسهم أو التسلسل في كتاب الطالب لمعرفة ما يحدث بعد وصول حبة اللقاح.</span></li><li><span class="time-pill">١٠ دقائق</span><span>شرح موجه: يوضح المعلم خطوات الإخصاب بالترتيب الذي يقدمه الكتاب، ويربطها بتكون البذور دون إدخال تفاصيل إضافية خارج مستوى الدرس.</span></li><li><span class="time-pill">١٦ دقائق</span><span>نشاط عملي: تنفيذ نشاط ٤-١ «استقصاء تركيب البذور». يفحص الطلاب البذور بالطريقة المبيّنة، يحددون الأجزاء المطلوبة في النشاط، ويسجلون الملاحظات في جمل/رسم كما هو مطلوب.</span></li><li><span class="time-pill">٥ دقائق</span><span>تقويم تكويني: فكر–زاوج–شارك؛ يرتب كل طالب مراحل «تلقيح ← إخصاب ← تكون بذور»، ثم يقارن ترتيبه مع زميل ويصححه بالرجوع إلى الكتاب.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يشرح طالبان العلاقة بين التلقيح والإخصاب، ويختتم المعلم بإعادة الكلمات الأساسية في ترتيبها الصحيح.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-4-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-4-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما الحدث الذي يسبق الإخصاب مباشرة في تسلسل الدرس؟</li><li>ماذا ينتج عن الإخصاب فيما يتعلق بالبذور؟</li><li>في نشاط ٤-١: ما الأجزاء التي أمكن تمييزها في البذرة بحسب تعليمات النشاط؟</li></ul></div>
+    </section><section class="noor-section" id="lesson-4-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-4-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>بطاقة خروج: اكتب ثلاثة ألفاظ مرتبة تصف التسلسل من التلقيح حتى تكون البذور.</p></div>
+    </section><section class="noor-section" id="lesson-4-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-4-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>مراجعة نشاط ٤-١ وتلخيص ملاحظات تركيب البذرة في ثلاث نقاط.</p></div>
+    </section><section class="noor-section" id="lesson-4-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-4-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: استخدام رسم الدرس لتتبع التسلسل بالإشارة فقط ثم تحويله إلى جمل قصيرة. الإثراء: تفسير سبب ارتباط درس الإخصاب بالدرس السابق «التلقيح» اعتمادًا على التسلسل في الكتاب.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-5" data-index="4" data-unit="1" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الأولى: النباتات والإنسان ككائنات حية</span><h2>٥-١ - الثمار</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-5')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-5-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-5-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتطبيق واستقصاء</p><ul><li>يربط تكون الثمار بما يحدث بعد الإخصاب وفق عرض الدرس.</li><li>يتعرف طرائق انتشار الثمار/البذور الواردة في الكتاب، ومنها الرياح والحيوانات.</li><li>يستقصي أثر شكل الأجنحة في بقاء الثمرة في الهواء من خلال نشاط ٥-١.</li></ul></div>
+    </section><section class="noor-section" id="lesson-5-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-5-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>الاستقصاء العملي: نشاط ٥-١ «تكيف ثمار النباتات: ما أفضل أنواع الأجنحة للإبقاء على الثمرة في الهواء؟».</li><li>التعلم التعاوني: جمع نتائج محاولات المجموعة ومقارنتها.</li><li>الربط البصري: تفسير صور الثمار ووسائل انتشارها في كتاب الطالب.</li></ul></div>
+    </section><section class="noor-section" id="lesson-5-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-5-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم صور ثمار مختلفة من كتاب الطالب ويسأل: ما الذي يساعد كل ثمرة على الانتشار بعيدًا عن النبات الأم؟ ثم يدوّن تصنيفات الطلاب المؤيدة بصورة الدرس.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-5-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-5-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: ربط الإخصاب بتكون الثمار، ثم فحص صور الثمار في كتاب الطالب وتحديد أمثلة الانتشار بالرياح أو الحيوانات.</span></li><li><span class="time-pill">٨ دقائق</span><span>بناء المفهوم: يناقش الطلاب السؤالين ١ و٢ في كتاب الطالب، ويستخرجون من الصور/النص صفات تساعد الثمار أو البذور على الانتشار.</span></li><li><span class="time-pill">١٨ دقائق</span><span>استقصاء: تنفيذ نشاط ٥-١ «تكيف ثمار النباتات: ما أفضل أنواع الأجنحة للإبقاء على الثمرة في الهواء؟». تصنع/تستخدم المجموعات النماذج المحددة في النشاط، تسقطها من الارتفاع نفسه، وتلاحظ أي تصميم يبقى في الهواء مدة أطول وفق التعليمات.</span></li><li><span class="time-pill">٥ دقائق</span><span>تطبيق كتاب النشاط: يبدأ الطلاب تمرين ٥-١ «الأزهار والتكاثر» ويربطون بين الأزهار والإخصاب وتكون الثمار في الأسئلة المحددة.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: تصرح كل مجموعة بالتصميم الأفضل في نشاط ٥-١ ودليلها من الملاحظة، ثم يصحح المعلم الاستنتاج بالرجوع إلى نتائج النشاط.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-5-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-5-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>اذكر طريقتين لانتشار الثمار/البذور وردتا في الدرس.</li><li>ما المتغير الذي غيّرته في نشاط ٥-١؟ وما الملاحظة التي قورنت بين النماذج؟</li><li>لماذا قد يساعد الجناح ثمرةً على الانتشار بالرياح؟</li><li>من تمرين ٥-١: اربط بين الأزهار والتكاثر وتكون الثمرة بحسب السؤال المقرر.</li></ul></div>
+    </section><section class="noor-section" id="lesson-5-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-5-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم ثمرة من صور الكتاب ويطلب من طالب تحديد وسيلة انتشارها ودليل ذلك من شكلها.</p></div>
+    </section><section class="noor-section" id="lesson-5-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-5-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٥-١ «الأزهار والتكاثر» ومراجعة السؤالين ١ و٢ من كتاب الطالب.</p></div>
+    </section><section class="noor-section" id="lesson-5-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-5-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: إعادة قراءة الصورة/النص الذي يوضح وسائل الانتشار مع تصنيف مثالين فقط. الإثراء: استخدام نتائج نشاط ٥-١ لترتيب النماذج من الأكثر إلى الأقل بقاءً في الهواء مع ذكر دليل النتائج.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-6" data-index="5" data-unit="1" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الأولى: النباتات والإنسان ككائنات حية</span><h2>٦-١ - أجهزة جسم الإنسان</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-6')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-6-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-6-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتصنيف</p><ul><li>يحدد عددًا من الأجهزة الرئيسة في جسم الإنسان كما يعرضها الدرس.</li><li>يربط أعضاء مختارة بالجهاز الذي تنتمي إليه.</li><li>يذكر وظيفة عامة لكل جهاز ضمن المستوى المطلوب في كتاب الطالب.</li></ul></div>
+    </section><section class="noor-section" id="lesson-6-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-6-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>المناقشة الموجهة: استخدام صور أجهزة الجسم في كتاب الطالب.</li><li>التصنيف التعاوني: ربط الأعضاء بالأجهزة في مجموعات.</li><li>التعلم بالمخطط: تنفيذ ورقة العمل ٦-١ «أجهزة جسم الإنسان».</li></ul></div>
+    </section><section class="noor-section" id="lesson-6-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-6-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يسأل المعلم: هل يعمل كل عضو في الجسم منفردًا؟ ثم يعرض صورة أجهزة جسم الإنسان في الكتاب ويطلب من الطلاب ملاحظة الأعضاء التي تظهر معًا.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-6-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-6-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: استدعاء أسماء أعضاء مألوفة، ثم الانتقال إلى مفهوم «الجهاز» باعتباره مجموعة أعضاء تعمل معًا وفق شرح الكتاب.</span></li><li><span class="time-pill">١٠ دقائق</span><span>شرح موجه: يتتبع الطلاب صور الأجهزة في كتاب الطالب، ويسمون الجهاز والأعضاء الظاهرة ووظيفته العامة بالعبارات المستخدمة في الدرس.</span></li><li><span class="time-pill">١٢ دقائق</span><span>تطبيق: ينجز الطلاب تمرين ٦-١ «أجهزة جسم الإنسان» في كتاب النشاط؛ يطابقون العضو بالجهاز أو يكملون المطلوب في الرسم بحسب التمرين.</span></li><li><span class="time-pill">٩ دقائق</span><span>ورقة عمل: تنفيذ ورقة العمل ٦-١ «أجهزة جسم الإنسان»، مع تصحيح فوري بعد كل جزء حتى لا يستمر خلط الأعضاء بين الأجهزة.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يجيب الطلاب عن الأسئلة ١-٥ من كتاب الطالب بصورة سريعة، ويختار المعلم سؤالين لقياس الربط بين الجهاز ووظيفته.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-6-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-6-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>سمِّ جهازين من أجهزة جسم الإنسان وردا في الدرس.</li><li>إلى أي جهاز ينتمي العضو الموضح في السؤال/الصورة؟</li><li>ما الوظيفة العامة للجهاز المحدد في كتاب الطالب؟</li><li>صحح مطابقة واحدة من ورقة العمل ٦-١ إذا كانت غير صحيحة واذكر السبب.</li></ul></div>
+    </section><section class="noor-section" id="lesson-6-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-6-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>بطاقة خروج: «اسم الجهاز - عضو منه - وظيفته العامة» في سطر واحد.</p></div>
+    </section><section class="noor-section" id="lesson-6-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-6-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٦-١ «أجهزة جسم الإنسان» ومراجعة الأسئلة ١-٥.</p></div>
+    </section><section class="noor-section" id="lesson-6-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-6-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: إعادة استخدام ورقة العمل ٦-١ مع عدد أقل من الأجهزة في كل مرة. الإثراء: اختيار جهازين من صور الكتاب والمقارنة بين نوع الأعضاء التي يحتويها كل جهاز ووظيفته العامة.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-7" data-index="6" data-unit="1" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الأولى: النباتات والإنسان ككائنات حية</span><h2>٧-١ - الهيكل العظمي للإنسان</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-7')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-7-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-7-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتطبيق واستقصاء</p><ul><li>يصف أدوار الهيكل العظمي الرئيسة كما يعرضها كتاب الطالب.</li><li>يتعرف عظامًا رئيسة في الهيكل العظمي من الرسم.</li><li>يستقصي علاقة شكل/طول نموذج العظم بسهولة كسره أو ثنيه وفق نشاط ٧-١.</li></ul></div>
+    </section><section class="noor-section" id="lesson-7-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-7-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>الاستقصاء العملي: نشاط ٧-١ «هل تتكسر العظام الطويلة بسهولة أكبر من العظام القصيرة؟».</li><li>التعلم بالمخطط: تسمية أجزاء الهيكل من صور الكتاب.</li><li>المناقشة القائمة على الدليل: تفسير نتيجة النشاط من الملاحظات لا من التخمين.</li></ul></div>
+    </section><section class="noor-section" id="lesson-7-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-7-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم رسم الهيكل العظمي في كتاب الطالب ويسأل عن وظيفتين متوقعتين، ثم يطلب التحقق من الكتاب قبل اعتماد الإجابات.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-7-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-7-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: مشاهدة الهيكل العظمي وتحديد عظام يمكن للطلاب تمييزها، ثم قراءة الوظائف الأساسية للهيكل في النص.</span></li><li><span class="time-pill">٩ دقائق</span><span>بناء المفهوم: يناقش المعلم مع الطلاب الدعم والحماية والمساعدة على الحركة، ويطلب أمثلة من الرسم على عظام تحمي أعضاء محددة وفق الكتاب.</span></li><li><span class="time-pill">١٧ دقائق</span><span>نشاط عملي: تنفيذ نشاط ٧-١ «هل تتكسر العظام الطويلة بسهولة أكبر من العظام القصيرة؟». يتبع الطلاب خطوات إعداد النماذج/المواد كما في الكتاب، يقارنون النماذج في الظروف نفسها، ويسجلون النتيجة التي تدعمها التجربة.</span></li><li><span class="time-pill">٥ دقائق</span><span>تطبيق: يبدأ الطلاب تمرين ٧-١ «كسر العظام» في كتاب النشاط ويربطون ما تعلموه بوظيفة العظام وحمايتها.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: إجابة مختارة من الأسئلة ١-٥ في كتاب الطالب ثم جملة استنتاج من نشاط ٧-١ بصيغة «وجدنا أن… لأن…».</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-7-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-7-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>اذكر وظيفتين للهيكل العظمي.</li><li>حدد عظمة أو مجموعة عظام تحمي عضوًا داخليًا كما في الرسم.</li><li>في نشاط ٧-١: ما الذي تمت مقارنته؟ وما النتيجة؟</li><li>من تمرين ٧-١: اذكر إجراءً أو تفسيرًا مرتبطًا بكسر العظام وفق السؤال المقرر.</li></ul></div>
+    </section><section class="noor-section" id="lesson-7-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-7-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يطلب المعلم من طالب الإشارة إلى وظيفة «الحماية» على رسم الهيكل، ومن طالب آخر الإشارة إلى وظيفة «الدعم/الحركة».</p></div>
+    </section><section class="noor-section" id="lesson-7-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-7-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٧-١ «كسر العظام» ومراجعة الأسئلة ١-٥.</p></div>
+    </section><section class="noor-section" id="lesson-7-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-7-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: استخدام رسم الهيكل لتسمية عدد محدود من العظام ثم ربطها بوظيفة واحدة. الإثراء: تفسير نتيجة نشاط ٧-١ مع التأكيد على أن الاستنتاج يعتمد على نموذج النشاط وشروطه.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-8" data-index="7" data-unit="1" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الأولى: النباتات والإنسان ككائنات حية</span><h2>٨-١ - المفاصل</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-8')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-8-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-8-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتصنيف وتطبيق</p><ul><li>يوضح أن المفصل هو موضع التقاء عظمتين أو أكثر وفق الدرس.</li><li>يميز أنواعًا من المفاصل من خلال الحركة التي تسمح بها.</li><li>يحدد نوع المفصل في أمثلة النشاط ٨-١.</li></ul></div>
+    </section><section class="noor-section" id="lesson-8-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-8-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>الاستقصاء بالحركة: ملاحظة حركة مفاصل الجسم بأمان كما يقترح الدرس.</li><li>التصنيف: نشاط ٨-١ «ما نوع المفصل؟».</li><li>القراءة الموجهة: ورقة العمل ٨-١ «التهاب المفاصل» للربط بتطبيق صحي.</li></ul></div>
+    </section><section class="noor-section" id="lesson-8-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-8-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يطلب المعلم من الطلاب ثني المرفق وتحريك الكتف ضمن حدود آمنة، ثم يسأل: هل تتحرك المفاصل كلها بالطريقة نفسها؟</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-8-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-8-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: ملاحظة حركة المرفق والكتف، ثم تعريف المفصل من نص كتاب الطالب.</span></li><li><span class="time-pill">٩ دقائق</span><span>شرح موجه: يعرض المعلم أنواع المفاصل/أمثلتها كما في كتاب الطالب، ويقارن اتجاهات الحركة المسموح بها في كل مثال.</span></li><li><span class="time-pill">١٣ دقائق</span><span>نشاط ٨-١ «ما نوع المفصل؟»: يفحص الطلاب الأمثلة المحددة في النشاط ويصنفون كل مفصل وفق الحركة، مع توضيح الدليل الذي استخدموه للتصنيف.</span></li><li><span class="time-pill">٩ دقائق</span><span>تطبيق وقراءة: معالجة الأسئلة ١-٧ المختارة في كتاب الطالب، ثم قراءة الجزء المناسب من ورقة العمل ٨-١ «التهاب المفاصل» والإجابة عن المطلوب فيها.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يقدم المعلم مثالًا لمفصل؛ يذكر الطالب نوعه وحركة واحدة يسمح بها.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-8-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-8-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما المقصود بالمفصل؟</li><li>لماذا لا تتحرك مفاصل الجسم كلها بالطريقة نفسها؟</li><li>من نشاط ٨-١: صنف مفصلًا واحدًا واذكر دليل التصنيف من حركته.</li><li>من ورقة العمل ٨-١: أجب عن السؤال الذي يربط التهاب المفاصل بالحركة.</li></ul></div>
+    </section><section class="noor-section" id="lesson-8-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-8-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>مقارنة ختامية بين مفصل المرفق ومفصل الكتف من حيث اتجاه الحركة، بالاعتماد على أمثلة الكتاب.</p></div>
+    </section><section class="noor-section" id="lesson-8-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-8-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال الأسئلة ١-٧ وورقة العمل ٨-١ «التهاب المفاصل» وفق ما حدده المعلم.</p></div>
+    </section><section class="noor-section" id="lesson-8-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-8-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: إعادة التصنيف باستخدام مثالين واضحين فقط من نشاط ٨-١. الإثراء: تفسير الفرق في مدى الحركة بين مثالين من مفاصل الدرس دون إضافة أنواع لم يذكرها الكتاب.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-9" data-index="8" data-unit="1" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الأولى: النباتات والإنسان ككائنات حية</span><h2>٩-١ - العضلات</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-9')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-9-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-9-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتطبيق وربط بنيوي وظيفي</p><ul><li>يبين دور العضلات الهيكلية في إحداث الحركة.</li><li>يفسر بصورة مبسطة كيف تعمل العضلات مع العظام والمفاصل في الحركة.</li><li>يتتبع عضلات الساق في تمرين ٩-١.</li></ul></div>
+    </section><section class="noor-section" id="lesson-9-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-9-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>النمذجة الحركية: ملاحظة شد واسترخاء العضلات عند حركة الطرف.</li><li>القراءة الموجهة: تتبع الشكل في كتاب الطالب.</li><li>التطبيق الفردي: تمرين ٩-١ «العضلات الهيكلية في الساق».</li></ul></div>
+    </section><section class="noor-section" id="lesson-9-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-9-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يطلب المعلم من الطلاب ثني الذراع ثم ملاحظة تغير صلابة/شكل العضلة بأمان، ويطرح سؤالًا: ماذا تفعل العضلات عندما نحرّك العظام؟</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-9-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-9-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: حركة بسيطة للمرفق مع ملاحظة العضلة، ثم استدعاء ما تعلمه الطلاب عن العظام والمفاصل.</span></li><li><span class="time-pill">١٠ دقائق</span><span>شرح موجه: يتابع الطلاب الرسم في كتاب الطالب ويحددون كيف ترتبط العضلات بالعظام وكيف يؤدي انقباض العضلة واسترخاؤها إلى الحركة ضمن مستوى الدرس.</span></li><li><span class="time-pill">١٢ دقائق</span><span>تطبيق كتاب النشاط: تنفيذ تمرين ٩-١ «العضلات الهيكلية في الساق». يتتبع الطلاب العضلات المشار إليها ويكملون المطلوب في الرسم/الأسئلة.</span></li><li><span class="time-pill">٩ دقائق</span><span>تقويم تكويني: مناقشة الأسئلة ١-٦ من كتاب الطالب، مع التركيز على تفسير حركة واحدة باستخدام الكلمات: عضلة، عظم، مفصل.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يصف طالب حركة الطرف في جملة سببية، ثم يصحح زميله باستخدام شكل الكتاب.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-9-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-9-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما دور العضلات الهيكلية في الحركة؟</li><li>كيف تعمل العضلة مع العظم والمفصل في مثال من الدرس؟</li><li>من تمرين ٩-١: حدد العضلة/الموضع المطلوب في رسم الساق.</li><li>ماذا يحدث للعضلة عند الانقباض وفق شرح الكتاب؟</li></ul></div>
+    </section><section class="noor-section" id="lesson-9-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-9-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>سلسلة ختامية: «عضلة تنقبض ← تسحب العظم ← تحدث حركة عند المفصل» بصياغة مناسبة لما في كتاب الطالب.</p></div>
+    </section><section class="noor-section" id="lesson-9-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-9-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٩-١ «العضلات الهيكلية في الساق» ومراجعة الأسئلة ١-٦.</p></div>
+    </section><section class="noor-section" id="lesson-9-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-9-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: إعادة شرح حركة واحدة باستخدام الرسم فقط ثم تحويلها إلى جملة. الإثراء: المقارنة بين وضعين للساق في تمرين ٩-١ وتحديد التغير في عمل العضلات بحسب الشكل.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-10" data-index="9" data-unit="1" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الأولى: النباتات والإنسان ككائنات حية</span><h2>١٠-١ - دراسة جسم الإنسان</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-10')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-10-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-10-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> بحث علمي وتواصل</p><ul><li>يتعرف كيف أسهم العلماء في دراسة جسم الإنسان كما في أمثلة الدرس.</li><li>يجمع معلومات من مصادر يحددها النشاط حول عمل عالم/دراسة علمية.</li><li>ينظم نتائج البحث ويعرضها بوضوح.</li></ul></div>
+    </section><section class="noor-section" id="lesson-10-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-10-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>التعلم بالبحث: نشاط ١٠-١ «إجراء بحث حول أعمال العلماء».</li><li>التعلم التعاوني: توزيع مهام البحث والتلخيص داخل المجموعة.</li><li>العرض القصير: تقديم النتيجة مع التمييز بين المعلومة والمصدر.</li></ul></div>
+    </section><section class="noor-section" id="lesson-10-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-10-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يسأل المعلم: كيف عرف العلماء ما نعرفه اليوم عن أجهزة الجسم؟ ثم يوجه الطلاب إلى الأمثلة الواردة في كتاب الطالب بدل الإجابات العامة.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-10-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-10-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: قراءة المثال/الأمثلة عن دراسة جسم الإنسان في كتاب الطالب، وتحديد نوع السؤال الذي حاول العلماء الإجابة عنه.</span></li><li><span class="time-pill">٨ دقائق</span><span>تخطيط البحث: يشرح المعلم متطلبات نشاط ١٠-١ «إجراء بحث حول أعمال العلماء»، وتحدد كل مجموعة العالم/الموضوع المحدد في النشاط ونقاط المعلومات المطلوب جمعها.</span></li><li><span class="time-pill">١٧ دقائق</span><span>تنفيذ البحث: تجمع المجموعات المعلومات من المصادر المسموح بها في النشاط، وتسجل الحقائق الرئيسة في عبارات قصيرة، ثم ترتبها لتوضيح العمل أو الاكتشاف وأهميته.</span></li><li><span class="time-pill">٦ دقائق</span><span>عرض وتقويم: تقدم كل مجموعة ملخصًا قصيرًا، ويقارن الطلاب العرض بأسئلة النشاط والأسئلة ١-٣ في كتاب الطالب للتأكد من اكتمال العناصر المطلوبة.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يذكر كل طالب حقيقة واحدة تعلمها عن طريقة دراسة جسم الإنسان، مع ربطها بالمثال الذي قرأه أو بحثه.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-10-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-10-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما السؤال العلمي أو المجال الذي تناوله المثال في الدرس؟</li><li>اذكر معلومة واحدة جمعتها في نشاط ١٠-١ وبيّن إلى أي عمل علمي ترتبط.</li><li>كيف نُظمت معلومات المجموعة لتجيب عن متطلبات النشاط؟</li><li>أجب عن أحد الأسئلة ١-٣ من كتاب الطالب اعتمادًا على محتوى الدرس.</li></ul></div>
+    </section><section class="noor-section" id="lesson-10-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-10-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يكتب الطلاب في بطاقة خروج: «تعلمت أن دراسة جسم الإنسان تطورت من خلال…» ثم يكملون الجملة بمعلومة من نشاطهم.</p></div>
+    </section><section class="noor-section" id="lesson-10-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-10-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال نشاط ١٠-١ «إجراء بحث حول أعمال العلماء» أو الأسئلة ١-٣ إذا بقي جزء غير مكتمل.</p></div>
+    </section><section class="noor-section" id="lesson-10-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-10-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: إعطاء الطالب عناصر النشاط واحدة تلو الأخرى ليملأها من المصدر المستخدم. الإثراء: تنظيم نتائج البحث في تسلسل زمني أو سببي إذا كانت المعلومات التي جمعها النشاط تسمح بذلك.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-11" data-index="10" data-unit="2" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثانية: حالات المادة</span><h2>١-٢ - المواد الصلبة والسائلة والغازية</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-11')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-11-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-11-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتصنيف وملاحظة</p><ul><li>يميز بين المواد الصلبة والسائلة والغازية من خصائصها الظاهرة.</li><li>يصنف عينات/أمثلة وفق حالة المادة.</li><li>يستخدم الملاحظات في نشاط ١-٢ لتبرير التصنيف.</li></ul></div>
+    </section><section class="noor-section" id="lesson-11-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-11-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>الاستقصاء بالملاحظة: نشاط ١-٢ «صلب أم سائل أم غاز؟».</li><li>التصنيف التعاوني: فرز الأمثلة إلى الحالات الثلاث مع ذكر الدليل.</li><li>التطبيق الفردي: تمرين ١-٢ «المواد الصلبة والسائلة والغازية».</li></ul></div>
+    </section><section class="noor-section" id="lesson-11-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-11-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم أمثلة آمنة من الحالات الثلاث كما يقترح الدرس، ويطلب من الطلاب وصف ما يرونه دون استخدام أسماء الحالات أولًا.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-11-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-11-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: وصف أمثلة/صور في كتاب الطالب من حيث الشكل وإمكانية الجريان وملء الوعاء، ثم طرح أسماء الحالات الثلاث.</span></li><li><span class="time-pill">٩ دقائق</span><span>بناء المفهوم: قراءة خصائص المواد الصلبة والسائلة والغازية في كتاب الطالب، مع ربط كل خاصية بالمثال المستخدم.</span></li><li><span class="time-pill">١٤ دقائق</span><span>نشاط ١-٢ «صلب أم سائل أم غاز؟»: يفحص الطلاب الأمثلة المحددة ويصنفونها، ثم يسجلون سبب التصنيف اعتمادًا على الخصائص لا على الاسم فقط.</span></li><li><span class="time-pill">٨ دقائق</span><span>تطبيق: تنفيذ تمرين ١-٢ «المواد الصلبة والسائلة والغازية» من كتاب النشاط، ومناقشة العناصر التي قد يحدث فيها خلط.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: إجابة الأسئلة ١-٣ من كتاب الطالب بصورة مختصرة، ثم ذكر خاصية واحدة لكل حالة.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-11-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-11-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما الخاصية التي تميز المادة الصلبة في الدرس؟</li><li>كيف تختلف المادة السائلة عن الغاز في سلوكها داخل الوعاء وفق الكتاب؟</li><li>صنف مثالًا من نشاط ١-٢ واذكر الدليل.</li><li>أكمل بندًا من تمرين ١-٢ مع تفسير اختيار الحالة.</li></ul></div>
+    </section><section class="noor-section" id="lesson-11-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-11-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>جدول شفهي من ثلاثة أعمدة: صلب - سائل - غاز؛ يضيف الطلاب مثالًا واحدًا وخاصية واحدة لكل عمود.</p></div>
+    </section><section class="noor-section" id="lesson-11-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-11-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ١-٢ «المواد الصلبة والسائلة والغازية» ومراجعة الأسئلة ١-٣.</p></div>
+    </section><section class="noor-section" id="lesson-11-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-11-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: إعادة التصنيف بثلاثة أمثلة واضحة من النشاط. الإثراء: اختيار مثالين من الحالة نفسها وذكر الخاصية المشتركة التي بررت تصنيفهما.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-12" data-index="11" data-unit="2" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثانية: حالات المادة</span><h2>٢-٢ - نظرية الجزيئات</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-12')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-12-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-12-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم ونمذجة وتفسير</p><ul><li>يستخدم نموذج الجزيئات لتمثيل المادة الصلبة والسائلة والغازية.</li><li>يقارن ترتيب الجزيئات وحركتها في الحالات الثلاث وفق نموذج الدرس.</li><li>يصمم نموذجًا مبسطًا لتوزيع الجزيئات في نشاط ٢-٢.</li></ul></div>
+    </section><section class="noor-section" id="lesson-12-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-12-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>النمذجة العلمية: نشاط ٢-٢ «تصميم نماذج لتوزيع الجزيئات في المواد الصلبة والسائلة والغازية».</li><li>المقارنة المنظمة: مقارنة المسافات والترتيب والحركة في الرسوم.</li><li>التفسير: استخدام النموذج لتفسير خصائص الحالات الثلاث.</li></ul></div>
+    </section><section class="noor-section" id="lesson-12-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-12-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم ثلاثة رسومات للجزيئات من كتاب الطالب دون أسماء، ويسأل أيها يمثل صلبًا أو سائلًا أو غازًا ولماذا.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-12-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-12-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: تصنيف رسومات الجزيئات الثلاث مع ذكر دليل أولي من الترتيب والمسافات.</span></li><li><span class="time-pill">١٠ دقائق</span><span>شرح موجه: يقرأ الطلاب وصف نموذج الجزيئات، ويقارنون ترتيب الجزيئات وحركتها في الصلب والسائل والغاز وفق الأشكال الواردة.</span></li><li><span class="time-pill">١٥ دقائق</span><span>نشاط ٢-٢: «تصميم نماذج لتوزيع الجزيئات في المواد الصلبة والسائلة والغازية». تبني/ترسم المجموعات النماذج الثلاثة كما يحدد النشاط، ثم تضع اسم الحالة تحت كل نموذج.</span></li><li><span class="time-pill">٦ دقائق</span><span>تطبيق: إنجاز تمرين ٢-٢ «نظرية الجزيئات» من كتاب النشاط، مع طلب تفسير الإجابات باستخدام كلمة «جزيئات» بدل الاكتفاء بذكر الحالة.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يجيب الطلاب عن الأسئلة ١-٤ من كتاب الطالب؛ يختار المعلم سؤالًا يقيس الفرق بين حالتين على مستوى الجزيئات.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-12-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-12-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>كيف تكون الجزيئات مرتبة في المادة الصلبة وفق النموذج؟</li><li>ما الفرق بين توزيع الجزيئات في السائل والغاز؟</li><li>أي نموذج صممته في نشاط ٢-٢ يمثل الغاز؟ وما الدليل؟</li><li>من تمرين ٢-٢: فسّر بندًا واحدًا باستخدام نظرية الجزيئات.</li></ul></div>
+    </section><section class="noor-section" id="lesson-12-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-12-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يصف المعلم حالةً على مستوى الجزيئات، ويحدد الطلاب اسم الحالة ويرفعون الدليل من النموذج.</p></div>
+    </section><section class="noor-section" id="lesson-12-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-12-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٢-٢ «نظرية الجزيئات» ومراجعة الأسئلة ١-٤.</p></div>
+    </section><section class="noor-section" id="lesson-12-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-12-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: استخدام الرسوم الثلاثة جنبًا إلى جنب مع كلمات «متقاربة/أبعد/مرتبة» كما في الكتاب. الإثراء: تفسير خاصية من خصائص كل حالة باستخدام النموذج الذي صممه الطالب.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-13" data-index="12" data-unit="2" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثانية: حالات المادة</span><h2>٣-٢ - تغير الحالة</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-13')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-13-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-13-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> تطبيق واستقصاء وقراءة بيانات</p><ul><li>يتعرف تغيرات الحالة التي يركز عليها الدرس مثل الانصهار والغليان/التبخر والتكاثف.</li><li>يسجل تغير درجة الحرارة أثناء نشاط ٣-٢ «غلي الماء» كما تحدد خطوات النشاط.</li><li>يستخلص استنتاجًا من الملاحظات/البيانات الناتجة عن التسخين.</li></ul></div>
+    </section><section class="noor-section" id="lesson-13-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-13-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>الاستقصاء العملي: نشاط ٣-٢ «غلي الماء».</li><li>قراءة البيانات: تنظيم قياسات درجة الحرارة ومناقشة نمطها.</li><li>التعلم بالمفاهيم: ربط أسماء تغيرات الحالة بالمشاهدات.</li></ul></div>
+    </section><section class="noor-section" id="lesson-13-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-13-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يراجع المعلم حالات المادة الثلاث، ثم يعرض مخطط تغيرات الحالة في كتاب الطالب ويسأل: ما الذي يحدث للحالة عند التسخين أو التبريد؟</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-13-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-13-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٤ دقائق</span><span>تهيئة: مراجعة الصلب والسائل والغاز، ثم تسمية الأسهم/التغيرات الظاهرة في مخطط كتاب الطالب.</span></li><li><span class="time-pill">٨ دقائق</span><span>إعداد الاستقصاء: قراءة تعليمات نشاط ٣-٢ «غلي الماء» وتحديد الأدوات وإجراءات الأمان وما الذي سيقاس ومتى تسجل القراءة.</span></li><li><span class="time-pill">١٨ دقائق</span><span>تنفيذ نشاط ٣-٢: تسخين الماء وفق الإجراء الوارد، تسجيل درجات الحرارة/الملاحظات في الفترات المحددة، وملاحظة ما يحدث عند الاقتراب من الغليان دون تجاوز تعليمات السلامة.</span></li><li><span class="time-pill">٦ دقائق</span><span>تحليل: يقارن الطلاب بياناتهم ويبدأون تمرين ٣-٢ «تسخين سائل» من كتاب النشاط، ويستخدمون الملاحظات لشرح تغير الحالة.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يجيب الطلاب عن سؤالين من الأسئلة ١-٦ في كتاب الطالب، أحدهما عن اسم تغير حالة والآخر عن ما شوهد في النشاط.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-13-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-13-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما اسم تغير الحالة من سائل إلى غاز في سياق الدرس؟</li><li>ما الذي قسته وسجلته في نشاط ٣-٢ «غلي الماء»؟</li><li>ماذا أظهرت البيانات عند استمرار التسخين؟</li><li>أكمل بندًا من تمرين ٣-٢ «تسخين سائل» اعتمادًا على بياناتك.</li></ul></div>
+    </section><section class="noor-section" id="lesson-13-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-13-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعود المعلم إلى مخطط تغيرات الحالة ويطلب من الطلاب إكمال سهمين بالاسم والاتجاه الصحيحين.</p></div>
+    </section><section class="noor-section" id="lesson-13-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-13-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٣-٢ «تسخين سائل» والأسئلة ١-٦ التي يحددها المعلم. ويمكن استخدام ورقة العمل ٣-٢(أ) «تغيرات الحالة» للمراجعة.</p></div>
+    </section><section class="noor-section" id="lesson-13-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-13-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: ورقة العمل ٣-٢(أ) لترتيب أسماء تغيرات الحالة وربطها بالمخطط. الإثراء: استخدام ورقة العمل ٣-٢(ج) «ربط الأفكار» لربط الملاحظة التجريبية باسم التغير المناسب.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-14" data-index="13" data-unit="2" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثانية: حالات المادة</span><h2>٤-٢ - تفسير تغيرات الحالة</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-14')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-14-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-14-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتفسير بنموذج الجزيئات</p><ul><li>يفسر تغيرات الحالة باستخدام ترتيب الجزيئات وحركتها.</li><li>يربط التسخين أو التبريد بتغير حركة الجزيئات وفق نموذج الكتاب.</li><li>يستخدم رسمًا أو وصفًا جزيئيًا لتفسير تغير حالة محدد.</li></ul></div>
+    </section><section class="noor-section" id="lesson-14-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-14-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>التفسير بالنموذج: الانتقال بين المستوى المرئي ورسوم الجزيئات.</li><li>فكر–زاوج–شارك: تفسير حالة ثم مقارنة التفسير بنموذج الكتاب.</li><li>التقويم بالرسم والكتابة: أوراق العمل ٤-٢(أ)، ٤-٢(ب)، ٤-٢(ج).</li></ul></div>
+    </section><section class="noor-section" id="lesson-14-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-14-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم صورتين للمادة قبل تغير الحالة وبعده، ثم يسأل الطلاب عما يتوقعونه بشأن الجزيئات في كل صورة.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-14-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-14-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: مراجعة نموذج الجزيئات للحالات الثلاث، ثم ربطه بمخطط تغيرات الحالة.</span></li><li><span class="time-pill">١٠ دقائق</span><span>شرح موجه: يستخدم المعلم رسومات كتاب الطالب لبيان كيف يغير التسخين/التبريد حركة الجزيئات وترتيبها أثناء تغير الحالة، مع إبقاء التفسير ضمن نموذج الدرس.</span></li><li><span class="time-pill">١١ دقائق</span><span>فكر–زاوج–شارك: يختار كل طالب تغير حالة من الأسئلة ١-٦، يكتب تفسيرًا على مستوى الجزيئات، يقارنه مع زميل، ثم يصححه بالرجوع إلى الشكل.</span></li><li><span class="time-pill">١٠ دقائق</span><span>تطبيق: تنفيذ تمرين ٤-٢ «تفسير تغيرات الحالة» ثم استخدام جزء مناسب من ورقة العمل ٤-٢(أ) أو ٤-٢(ب) لتقييم التفسير بالرسم/الكتابة، و٤-٢(ج) لتثبيت المصطلحات.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يشرح طالب تغير حالة واحدًا في جملتين: ما الذي يحدث ظاهريًا، وما الذي يحدث للجزيئات.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-14-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-14-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>كيف تفسر الانصهار باستخدام نموذج الجزيئات؟</li><li>ماذا يحدث لحركة الجزيئات عند التسخين وفق الدرس؟</li><li>من تمرين ٤-٢: فسر تغير حالة واحدًا بدل تسميته فقط.</li><li>في ورقة العمل ٤-٢(ب): هل الرسم يوضح توزيع الجزيئات الصحيح للحالة؟ علل من النموذج.</li></ul></div>
+    </section><section class="noor-section" id="lesson-14-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-14-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>جملة إكمال: «عند … تزداد/تقل حركة الجزيئات، ولذلك …» ويملؤها الطالب بتغير حالة من الكتاب.</p></div>
+    </section><section class="noor-section" id="lesson-14-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-14-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٤-٢ «تفسير تغيرات الحالة» وورقة العمل ٤-٢(ج) «المصطلحات والتفسيرات» إذا لم تكتمل.</p></div>
+    </section><section class="noor-section" id="lesson-14-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-14-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: استخدام ورقة العمل ٤-٢(ب) التي تعتمد الرسم ثم الانتقال إلى وصف لفظي قصير. الإثراء: استخدام ٤-٢(أ) لكتابة تفسير كامل يربط الطاقة/التسخين بحركة الجزيئات وتغير الحالة كما في الدرس.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-15" data-index="14" data-unit="2" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثانية: حالات المادة</span><h2>٥-٢ - الانتشار</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-15')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-15-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-15-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وملاحظة وتفسير</p><ul><li>يصف الانتشار بوصفه حركة وانتشار الجزيئات من منطقة إلى أخرى وفق الدرس.</li><li>يلاحظ دليلًا على الانتشار في نشاط ٥-٢ «عرض الانتشار».</li><li>يفسر الملاحظة باستخدام نموذج الجزيئات.</li></ul></div>
+    </section><section class="noor-section" id="lesson-15-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-15-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>العرض العملي: نشاط ٥-٢ «عرض الانتشار».</li><li>الملاحظة الزمنية: وصف ما يتغير من بداية العرض إلى نهايته.</li><li>التفسير بالنموذج: ربط الانتشار بحركة الجزيئات.</li></ul></div>
+    </section><section class="noor-section" id="lesson-15-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-15-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يسأل المعلم: كيف يمكن لمادة أن تنتشر في سائل أو غاز من دون تحريك الوعاء؟ ثم يوجه الطلاب لمراقبة العرض قبل الإجابة.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-15-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-15-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: مراجعة أن الجزيئات تتحرك، ثم توقع ما سيحدث في عرض الانتشار قبل تنفيذه.</span></li><li><span class="time-pill">٨ دقائق</span><span>شرح موجه: قراءة تعريف الانتشار والأمثلة في كتاب الطالب، وتحديد أن المطلوب تفسير التغير على مستوى الجزيئات.</span></li><li><span class="time-pill">١٥ دقائق</span><span>نشاط ٥-٢ «عرض الانتشار»: ينفذ المعلم/الطلاب العرض كما هو موضح، ويلاحظ الطلاب المكان الذي تبدأ منه المادة وكيف تتغير منطقة انتشارها مع الزمن، ويسجلون وصفًا دقيقًا.</span></li><li><span class="time-pill">٨ دقائق</span><span>تطبيق: ينجز الطلاب تمرين ٥-٢ «الانتشار» من كتاب النشاط، ويجيبون عن السؤالين ١ و٢ من كتاب الطالب باستخدام نتائج العرض.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يكتب كل طالب تعريفًا مختصرًا للانتشار ثم يذكر ملاحظة واحدة من النشاط تؤيده.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-15-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-15-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما المقصود بالانتشار وفق الدرس؟</li><li>ما التغير الذي شاهدته خلال نشاط ٥-٢؟</li><li>كيف يفسر نموذج الجزيئات انتشار المادة في العرض؟</li><li>أكمل بندًا من تمرين ٥-٢ يطلب توقع اتجاه/نتيجة الانتشار.</li></ul></div>
+    </section><section class="noor-section" id="lesson-15-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-15-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يطلب المعلم من طالب وصف «الملاحظة»، ومن آخر تقديم «التفسير الجزيئي»؛ ثم يوضح الفرق بين الوصف والتفسير.</p></div>
+    </section><section class="noor-section" id="lesson-15-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-15-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٥-٢ «الانتشار» ومراجعة السؤالين ١ و٢.</p></div>
+    </section><section class="noor-section" id="lesson-15-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-15-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: إعادة مشاهدة/وصف مرحلتين فقط من العرض: البداية والنهاية. الإثراء: صياغة تفسير كامل للمشاهدة يتضمن حركة الجزيئات كما يوضحها الكتاب.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-16" data-index="15" data-unit="2" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثانية: حالات المادة</span><h2>٦-٢ - استقصاء الانتشار</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-16')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-16-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-16-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> استقصاء علمي وتحليل بيانات</p><ul><li>يحدد عاملًا يمكن أن يؤثر في سرعة الانتشار.</li><li>يخطط وينفذ استقصاءً مع التحكم في المتغيرات وفق نشاط ٦-٢.</li><li>يستخدم التكرار/القياسات والنتائج للوصول إلى استنتاج مدعوم بالأدلة.</li></ul></div>
+    </section><section class="noor-section" id="lesson-16-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-16-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>الاستقصاء المنظم: نشاط ٦-٢(أ) «ما العوامل التي تسرع أو تبطئ الانتشار؟».</li><li>الاستقصاء التجريبي: نشاط ٦-٢(ب) «استقصاء تأثير درجة الحرارة على الانتشار».</li><li>تحليل المتغيرات: الاستفادة من أوراق العمل ٦-٢(أ–د) كما يحدد المعلم.</li></ul></div>
+    </section><section class="noor-section" id="lesson-16-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-16-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعيد المعلم عرض فكرة الانتشار، ثم يسأل: ما العوامل التي قد تجعله أسرع أو أبطأ؟ وتُسجل التوقعات لاختيار العامل المحدد في النشاط.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-16-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-16-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: مناقشة نشاط ٦-٢(أ) وتحديد عوامل مقترحة تؤثر في الانتشار، ثم التركيز على درجة الحرارة كما في نشاط ٦-٢(ب).</span></li><li><span class="time-pill">١٠ دقائق</span><span>تخطيط الاستقصاء: يحدد الطلاب المتغير الذي سيغيرونه، وما سيقيسونه/يلاحظونه، والعوامل التي يجب إبقاؤها ثابتة. تُستخدم ورقة العمل ٦-٢(ب) للمصطلحات أو الورقة الداعمة للنشاط عند الحاجة.</span></li><li><span class="time-pill">١٦ دقائق</span><span>تنفيذ نشاط ٦-٢(ب) «استقصاء تأثير درجة الحرارة على الانتشار»: تنفذ المجموعات الخطوات، تسجل الزمن/الملاحظة بالطريقة المطلوبة، وتكرر القياس إذا نصت التعليمات أو سمح الوقت.</span></li><li><span class="time-pill">٥ دقائق</span><span>تحليل: تقارن المجموعات النتائج، وتحسب/تستخلص القيمة المطلوبة وفق ورقة النشاط، ثم تكتب استنتاجًا يذكر أثر درجة الحرارة كما تدعمه البيانات.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يعرض طالب متغيرًا ثابتًا وطالب آخر الاستنتاج، ويصحح المعلم أي استنتاج لا يتوافق مع النتائج.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-16-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-16-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما المتغير الذي تم تغييره في نشاط ٦-٢(ب)؟</li><li>ما المتغير الذي تمت ملاحظته أو قياسه؟</li><li>اذكر عاملًا واحدًا كان يجب إبقاؤه ثابتًا لجعل المقارنة عادلة.</li><li>ماذا تقول نتائجك عن تأثير درجة الحرارة على الانتشار؟</li><li>لماذا يفيد تكرار القياس أو مقارنة أكثر من قراءة في الاستقصاء؟</li></ul></div>
+    </section><section class="noor-section" id="lesson-16-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-16-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>بطاقة خروج من ثلاثة أجزاء: «المتغير المستقل - المتغير التابع - الاستنتاج» اعتمادًا على نشاط الحصة.</p></div>
+    </section><section class="noor-section" id="lesson-16-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-16-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٦-٢ «استقصاء الانتشار» واستخدام ورقة العمل ٦-٢(ج) «استقصاء الانتشار» إذا حددها المعلم.</p></div>
+    </section><section class="noor-section" id="lesson-16-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-16-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: ملء جدول المتغيرات في ورقة العمل ٦-٢(ب) قبل كتابة الاستنتاج. الإثراء: استخدام ورقة العمل ٦-٢(د) «مزيد من عمليات استقصاء الانتشار» لتخطيط استقصاء آخر مع تحديد المتغيرات بوضوح.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-17" data-index="16" data-unit="2" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثانية: حالات المادة</span><h2>٧-٢ - ضغط الغاز</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-17')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-17-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-17-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتفسير بنموذج الجزيئات</p><ul><li>يشرح أن الغاز يسبب ضغطًا على جدران الوعاء كما يوضح الدرس.</li><li>يفسر ضغط الغاز بحركة الجزيئات وتصادمها بجدران الوعاء.</li><li>يطبق الفكرة على أمثلة كتاب الطالب وكتاب النشاط.</li></ul></div>
+    </section><section class="noor-section" id="lesson-17-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-17-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>النمذجة الجزيئية: تفسير الضغط باستخدام حركة الجزيئات.</li><li>المناقشة الموجهة: تحليل الأمثلة والصور الواردة في الكتاب.</li><li>التطبيق الفردي: تمرين ٧-٢ «ضغط الغاز».</li></ul></div>
+    </section><section class="noor-section" id="lesson-17-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-17-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يطلب المعلم من الطلاب ملاحظة مثال الوعاء/الغاز في كتاب الطالب ويسأل: إذا كانت جزيئات الغاز متحركة، ماذا يحدث عندما تصل إلى جدار الوعاء؟</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-17-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-17-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: مراجعة خصائص الغاز وحركة جزيئاته، ثم توقع أثر اصطدامها بالجدران.</span></li><li><span class="time-pill">١١ دقائق</span><span>شرح موجه: يتتبع الطلاب الرسم والنص في كتاب الطالب الذي يفسر ضغط الغاز، ويحولون الرسم إلى تسلسل: جزيئات تتحرك ← تصطدم بالجدار ← ينشأ ضغط.</span></li><li><span class="time-pill">١٠ دقائق</span><span>تطبيق أمثلة: يناقش الطلاب أمثلة الدرس ويجيبون عن الأسئلة ١-٥ بالتدرج، مع طلب تفسير كل إجابة بالمصطلحات الجزيئية المناسبة.</span></li><li><span class="time-pill">١٠ دقائق</span><span>كتاب النشاط: تنفيذ تمرين ٧-٢ «ضغط الغاز»، ومراجعة الإجابات في أزواج بحيث يحدد كل طالب أين استُخدم نموذج الجزيئات في التفسير.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يرسم الطالب وعاءً بسيطًا وجزيئات غاز مع أسهم للحركة، ثم يكتب جملة توضح سبب الضغط.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-17-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-17-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>لماذا يضغط الغاز على جدران الوعاء؟</li><li>ما دور حركة الجزيئات في تفسير الضغط؟</li><li>أجب عن بند من الأسئلة ١-٥ مستخدمًا نموذج الجزيئات.</li><li>من تمرين ٧-٢: فسر التغير في الضغط/السلوك في المثال المعروض وفق المعطيات.</li></ul></div>
+    </section><section class="noor-section" id="lesson-17-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-17-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>تلخيص شفهي: «ضغط الغاز ينتج لأن…» ويكمل الطلاب العبارة اعتمادًا على نموذج الجزيئات.</p></div>
+    </section><section class="noor-section" id="lesson-17-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-17-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٧-٢ «ضغط الغاز» ومراجعة الأسئلة ١-٥.</p></div>
+    </section><section class="noor-section" id="lesson-17-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-17-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: إعادة بناء التفسير باستخدام ثلاثة أسهم متسلسلة. الإثراء: تفسير مثال ثانٍ من تمرين ٧-٢ مع تحديد ما يحدث للجزيئات قبل وصف أثره في الضغط.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-18" data-index="17" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>١-٣ - استخدام الطاقة</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-18')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-18-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-18-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتصنيف وتطبيق</p><ul><li>يتعرف أن الأنشطة والعمليات المختلفة تتطلب طاقة.</li><li>يحدد أمثلة لاستخدام الطاقة في الحياة اليومية وفق الدرس.</li><li>يصنف أمثلة الطاقة في نشاطي ١-٣(أ) و١-٣(ب) بحسب المطلوب.</li></ul></div>
+    </section><section class="noor-section" id="lesson-18-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-18-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>العصف الذهني المنضبط: توليد أمثلة ثم التحقق منها بكتاب الطالب.</li><li>التعلم التعاوني: نشاط ١-٣(أ) «الأنشطة التي تتطلب طاقة».</li><li>التطبيق: تمرين/نشاط ١-٣(ب) «عالم الطاقة» وتمرين ١-٣ «طاقة الجسم» في كتاب النشاط.</li></ul></div>
+    </section><section class="noor-section" id="lesson-18-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-18-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يسأل المعلم: ما الأنشطة التي لا يمكن أن تحدث من دون طاقة؟ ويسجل أمثلة الطلاب ثم يطلب التحقق منها من سياق الدرس.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-18-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-18-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: قراءة السؤال الافتتاحي/الصورة في كتاب الطالب وتوليد أمثلة لاستخدام الطاقة.</span></li><li><span class="time-pill">٨ دقائق</span><span>بناء المفهوم: يناقش المعلم معنى استخدام الطاقة في أمثلة الدرس دون القفز إلى تفاصيل مخازن الطاقة التي ستأتي لاحقًا.</span></li><li><span class="time-pill">١٢ دقائق</span><span>نشاط ١-٣(أ) «الأنشطة التي تتطلب طاقة»: تعمل المجموعات على الأمثلة المحددة، وتوضح أين تُستخدم الطاقة في كل نشاط.</span></li><li><span class="time-pill">١١ دقائق</span><span>تطبيق: تنفيذ ١-٣(ب) «عالم الطاقة» ثم بدء تمرين ١-٣ «طاقة الجسم» في كتاب النشاط وربط النشاط البشري بالحاجة إلى الطاقة.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يجيب الطلاب عن السؤال ١ في كتاب الطالب ثم يذكر كل طالب مثالًا واحدًا مختلفًا من أنشطة الحصة.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-18-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-18-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>اذكر نشاطين يتطلبان طاقة من أمثلة الدرس.</li><li>في نشاط ١-٣(أ): أين يظهر استخدام الطاقة في المثال المحدد؟</li><li>من «عالم الطاقة»: صنف/حدد المثال كما يطلب النشاط.</li><li>في تمرين ١-٣ «طاقة الجسم»: ما النشاط الذي يبين حاجة الجسم إلى الطاقة؟</li></ul></div>
+    </section><section class="noor-section" id="lesson-18-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-18-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>دقيقة أخيرة: يكتب الطلاب «الطاقة لازمة لـ…» ويكملون العبارة بمثال من الكتاب.</p></div>
+    </section><section class="noor-section" id="lesson-18-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-18-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ١-٣ «طاقة الجسم» ومراجعة نشاط «عالم الطاقة».</p></div>
+    </section><section class="noor-section" id="lesson-18-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-18-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: العمل على مثالين واضحين من نشاط ١-٣(أ) مع سؤال مباشر «ما الذي يحدث؟ أين تحتاج العملية إلى طاقة؟». الإثراء: تنظيم أمثلة «عالم الطاقة» في مجموعات وفق أوجه التشابه التي يطلبها النشاط.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-19" data-index="18" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>٢-٣ - المخازن الكيميائية للطاقة</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-19')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-19-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-19-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتطبيق واستقصاء</p><ul><li>يتعرف أمثلة لمخازن الطاقة الكيميائية كما يعرضها الدرس.</li><li>يربط الوقود/الغذاء/البطاريات بفكرة تخزين الطاقة كيميائيًا وفق أمثلة الكتاب.</li><li>يلاحظ إطلاق الطاقة من الوقود في نشاط ٢-٣ مع الالتزام بإجراءات السلامة.</li></ul></div>
+    </section><section class="noor-section" id="lesson-19-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-19-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>الاستقصاء العملي: نشاط ٢-٣ «الطاقة من الوقود».</li><li>المقارنة: مقارنة أمثلة مخازن الطاقة الكيميائية في الكتاب.</li><li>حل المشكلات: ورقة العمل ٢-٣ «بطاريات نفد شحنها».</li></ul></div>
+    </section><section class="noor-section" id="lesson-19-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-19-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم أمثلة الوقود والغذاء والبطارية من الدرس ويسأل: ما القاسم المشترك بينها في موضوع الطاقة؟</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-19-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-19-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: تحديد أمثلة مخازن الطاقة الكيميائية من الصور/النص في كتاب الطالب.</span></li><li><span class="time-pill">٩ دقائق</span><span>شرح موجه: يوضح المعلم أن الطاقة يمكن أن تكون مخزنة كيميائيًا في المواد التي يذكرها الدرس، ويطلب من الطلاب تفسير الأمثلة بأسلوب الكتاب.</span></li><li><span class="time-pill">١٦ دقائق</span><span>نشاط ٢-٣ «الطاقة من الوقود»: تنفيذ خطوات النشاط كما هي، مع تحديد ما الذي يُلاحظ أو يقاس عند استخدام الوقود، وتسجيل النتائج وفق الجدول/المطلوب، مع تطبيق تعليمات السلامة.</span></li><li><span class="time-pill">٦ دقائق</span><span>تطبيق: حل تمرين ٢-٣ «المخازن الكيميائية للطاقة» من كتاب النشاط أو جزء من ورقة العمل ٢-٣ «بطاريات نفد شحنها»، مع ربط البطارية بفكرة المخزن الكيميائي.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: إجابة السؤالين ١ و٢ من كتاب الطالب ثم ذكر مثالين مختلفين لمخزن كيميائي للطاقة.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-19-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-19-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>اذكر مثالين لمخازن كيميائية للطاقة من الدرس.</li><li>ما الدليل الذي لاحظته على انتقال/إطلاق الطاقة في نشاط ٢-٣؟</li><li>لماذا تعد البطارية مثالًا مناسبًا في هذا الدرس بحسب ورقة العمل ٢-٣؟</li><li>أجب عن السؤال ١ أو ٢ من كتاب الطالب مستخدمًا مصطلح «مخزن كيميائي».</li></ul></div>
+    </section><section class="noor-section" id="lesson-19-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-19-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يضع المعلم ثلاثة أمثلة من الدرس، ويحدد الطلاب أيها مخزن كيميائي للطاقة ويبررون الاختيار.</p></div>
+    </section><section class="noor-section" id="lesson-19-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-19-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٢-٣ «المخازن الكيميائية للطاقة» وورقة العمل ٢-٣ «بطاريات نفد شحنها» إذا حددها المعلم.</p></div>
+    </section><section class="noor-section" id="lesson-19-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-19-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: مطابقة أمثلة الدرس بالمصطلح «مخزن كيميائي». الإثراء: استخدام نتيجة نشاط ٢-٣ لتوضيح كيف عرف الطلاب أن طاقة انتقلت أثناء استخدام الوقود.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-20" data-index="19" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>٣-٣ - مخازن أخرى للطاقة</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-20')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-20-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-20-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتصنيف وتطبيق</p><ul><li>يتعرف مخازن طاقة أخرى غير المخزن الكيميائي كما يعرضها الدرس.</li><li>يحدد مخزن الطاقة المناسب في أمثلة الألعاب/الأجسام.</li><li>يطبق الفكرة في نشاطي ٣-٣(أ) و٣-٣(ب).</li></ul></div>
+    </section><section class="noor-section" id="lesson-20-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-20-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>الاستكشاف بالألعاب: نشاط ٣-٣(أ) «ألعاب تعمل بالطاقة».</li><li>التصميم والتطبيق: نشاط ٣-٣(ب) «مصمم الألعاب».</li><li>المقارنة: التمييز بين أنواع مخازن الطاقة في الأمثلة.</li></ul></div>
+    </section><section class="noor-section" id="lesson-20-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-20-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم لعبة أو صورة من أمثلة الدرس ويسأل: من أين تحصل على الطاقة قبل أن تبدأ الحركة؟ ثم يوجه الطلاب إلى نوع المخزن الوارد في الكتاب.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-20-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-20-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: مراجعة المخزن الكيميائي، ثم تقديم أمثلة من الدرس تشير إلى مخازن أخرى للطاقة.</span></li><li><span class="time-pill">٩ دقائق</span><span>شرح موجه: يقرأ الطلاب وصف المخازن الأخرى ويميزون بينها من خلال الحالات/الأمثلة المستخدمة في الكتاب.</span></li><li><span class="time-pill">١٢ دقائق</span><span>نشاط ٣-٣(أ) «ألعاب تعمل بالطاقة»: يفحص الطلاب الألعاب/الصور المحددة ويحددون أين تكون الطاقة مخزنة قبل التشغيل وما التغير الذي يحدث.</span></li><li><span class="time-pill">١٠ دقائق</span><span>نشاط ٣-٣(ب) «مصمم الألعاب»: يطبق الطلاب الفكرة في التصميم أو الوصف المطلوب، ويحددون مخزن الطاقة في اللعبة وطريقة استخدامه وفق تعليمات النشاط.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: من الأسئلة ١-٤، يجيب كل طالب عن سؤال يطلب تحديد مخزن طاقة ويبرر اختياره.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-20-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-20-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما الفرق بين المخزن الكيميائي وأحد المخازن الأخرى التي عرضها الدرس؟</li><li>في نشاط ٣-٣(أ): أين كانت الطاقة مخزنة قبل حركة اللعبة؟</li><li>في نشاط ٣-٣(ب): ما مخزن الطاقة الذي اعتمد عليه تصميمك؟</li><li>أجب عن بند من الأسئلة ١-٤ يطلب التعرف إلى مخزن الطاقة.</li></ul></div>
+    </section><section class="noor-section" id="lesson-20-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-20-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>جدول شفهي «المثال - مخزن الطاقة» باستخدام ثلاثة أمثلة من أنشطة الحصة.</p></div>
+    </section><section class="noor-section" id="lesson-20-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-20-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال المطلوب في نشاط ٣-٣(ب) «مصمم الألعاب» ومراجعة الأسئلة ١-٤.</p></div>
+    </section><section class="noor-section" id="lesson-20-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-20-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: مطابقة مثالين فقط مع نوع المخزن من الكتاب. الإثراء: مقارنة لعبتين من نشاط ٣-٣(أ) وشرح كيف يختلف مخزن الطاقة بينهما إذا كان مختلفًا.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-21" data-index="20" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>٤-٣ - طاقة الحركة</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-21')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-21-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-21-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتطبيق وملاحظة</p><ul><li>يتعرف طاقة الحركة بوصفها مرتبطة بالأجسام المتحركة وفق الدرس.</li><li>يقارن طاقة الحركة في أمثلة يختلف فيها مقدار الحركة/الكتلة كما يعرض الكتاب.</li><li>يربط الاحتكاك بتولد حرارة في نشاط ٤-٣(ب).</li></ul></div>
+    </section><section class="noor-section" id="lesson-21-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-21-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>المقارنة: نشاط ٤-٣(أ) «مقارنات الطاقة الحركية».</li><li>الاستقصاء بالملاحظة: نشاط ٤-٣(ب) «الاحتكاك الذي يولد حرارة».</li><li>المناقشة الموجهة: تفسير النتائج باستخدام مفهوم طاقة الحركة.</li></ul></div>
+    </section><section class="noor-section" id="lesson-21-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-21-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم جسمين متحركين في صورة/مثال الكتاب ويسأل: أيهما تتوقع أن يمتلك طاقة حركة أكبر؟ وما الدليل المتاح؟</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-21-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-21-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: تعريف طاقة الحركة من كتاب الطالب وربطها بأمثلة أجسام متحركة.</span></li><li><span class="time-pill">٨ دقائق</span><span>شرح موجه: مناقشة العوامل/المقارنات التي يستخدمها الدرس عند الحديث عن طاقة الحركة، مع تجنب صيغ حسابية لم يطلبها الكتاب.</span></li><li><span class="time-pill">١٢ دقائق</span><span>نشاط ٤-٣(أ) «مقارنات الطاقة الحركية»: يقارن الطلاب الأمثلة المحددة ويبررون الترتيب/الاختيار بحسب المعطيات.</span></li><li><span class="time-pill">١١ دقائق</span><span>نشاط ٤-٣(ب) «الاحتكاك الذي يولد حرارة»: ينفذ الطلاب الخطوات ويلاحظون أثر الاحتكاك، ثم يربطون الملاحظة بانتقال/تغير الطاقة كما يوضح الدرس.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: معالجة سؤالين من الأسئلة ١-٣، أحدهما عن طاقة الحركة والآخر عن الاحتكاك والحرارة.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-21-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-21-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>متى نقول إن جسمًا لديه طاقة حركة؟</li><li>في نشاط ٤-٣(أ): أي مثال كانت له طاقة حركة أكبر وفق المعطيات؟</li><li>ما الملاحظة التي سجلتها في نشاط ٤-٣(ب) عند حدوث الاحتكاك؟</li><li>كيف ربط الدرس بين الاحتكاك والحرارة؟</li></ul></div>
+    </section><section class="noor-section" id="lesson-21-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-21-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يكمل الطلاب: «عندما يتحرك الجسم…»، و«عند الاحتكاك لاحظنا…» مستندين إلى نشاطي الحصة.</p></div>
+    </section><section class="noor-section" id="lesson-21-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-21-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>مراجعة الأسئلة ١-٣ وكتابة استنتاج نشاط ٤-٣(ب) في جملة علمية واحدة.</p></div>
+    </section><section class="noor-section" id="lesson-21-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-21-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: استخدام أمثلة واضحة للحركة من نشاط ٤-٣(أ). الإثراء: ترتيب أكثر من مثال من النشاط حسب طاقة الحركة مع ذكر المعطى الذي استند إليه الترتيب.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-22" data-index="21" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>٥-٣ - الطاقة الحرارية</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-22')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-22-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-22-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم واستقصاء وقراءة بيانات</p><ul><li>يتعرف الطاقة الحرارية في سياق التسخين والتبريد كما يعرض الدرس.</li><li>يتابع تغير درجة حرارة الماء مع الزمن في نشاط ٥-٣(ب) «تبريد الماء».</li><li>يستنتج من البيانات كيف تتغير درجة الحرارة أثناء التبريد.</li></ul></div>
+    </section><section class="noor-section" id="lesson-22-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-22-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>الاستقصاء العملي: نشاط ٥-٣(أ) «الطاقة الحرارية» ونشاط ٥-٣(ب) «تبريد الماء».</li><li>تمثيل/قراءة البيانات: تنظيم قياسات درجة الحرارة مع الزمن.</li><li>التطبيق: تمرين ٥-٣ «تسخين كتلة».</li></ul></div>
+    </section><section class="noor-section" id="lesson-22-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-22-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم مثال جسم ساخن وآخر أبرد من الدرس ويسأل: ما الذي يمكن قياسه لمتابعة التسخين أو التبريد؟</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-22-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-22-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٤ دقائق</span><span>تهيئة: مراجعة استخدام مقياس درجة الحرارة وقراءة أمثلة الطاقة الحرارية في كتاب الطالب.</span></li><li><span class="time-pill">٨ دقائق</span><span>نشاط ٥-٣(أ) «الطاقة الحرارية»: تنفيذ الجزء المحدد/مناقشة أمثلته لتثبيت العلاقة بين التسخين والتغير الحراري بحسب الدرس.</span></li><li><span class="time-pill">١٨ دقائق</span><span>نشاط ٥-٣(ب) «تبريد الماء»: يجهز الطلاب الماء وفق التعليمات، يسجلون درجة الحرارة عند الأزمنة المحددة، ويحافظون على ثبات شروط القياس. يمكن استخدام ورقة العمل ٥-٣(أ) الداعمة للنشاط لتسجيل البيانات.</span></li><li><span class="time-pill">٦ دقائق</span><span>تحليل وتطبيق: يصف الطلاب اتجاه البيانات ويبدأون تمرين ٥-٣ «تسخين كتلة»، ثم تُستخدم ورقة العمل ٥-٣(ب) لتقييم تفسير النتائج إذا حددها المعلم.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يجيب الطلاب عن السؤالين ١ و٢ ويذكرون اتجاه تغير درجة حرارة الماء في النشاط مع دليل رقمي من بياناتهم.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-22-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-22-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما الكمية التي قستها في نشاط «تبريد الماء»؟</li><li>كيف تغيرت درجة الحرارة مع مرور الزمن وفق جدولك؟</li><li>اذكر قراءة من بياناتك تدعم الاستنتاج.</li><li>من تمرين ٥-٣ «تسخين كتلة»: ما التغير الذي يطلب منك تفسيره؟</li></ul></div>
+    </section><section class="noor-section" id="lesson-22-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-22-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يختار كل طالب قراءتين من جدوله ويكتب بينهما مقارنة صحيحة، ثم يذكر الاستنتاج العام.</p></div>
+    </section><section class="noor-section" id="lesson-22-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-22-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٥-٣ «تسخين كتلة» وورقة العمل ٥-٣(ب) إن كانت مقررة.</p></div>
+    </section><section class="noor-section" id="lesson-22-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-22-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: قراءة جدول «تبريد الماء» صفًا صفًا واستخراج اتجاه واحد فقط. الإثراء: تفسير نمط التبريد باستخدام جميع القراءات بدل الاعتماد على قراءة واحدة.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-23" data-index="22" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>٦-٣ - نقل الطاقة</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-23')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-23-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-23-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتمثيل وتحليل</p><ul><li>يصف أن الطاقة يمكن أن تنتقل من مخزن أو جسم إلى آخر وفق أمثلة الدرس.</li><li>يميز بين فكرة تخزين الطاقة وفكرة نقلها في الأمثلة.</li><li>يمثل انتقال الطاقة في نشاط ٦-٣.</li></ul></div>
+    </section><section class="noor-section" id="lesson-23-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-23-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>التمثيل بالمخطط: نشاط ٦-٣ «انتقال الطاقة».</li><li>المقارنة: تمرين ٦-٣ «تخزين الطاقة ونقلها» من كتاب النشاط.</li><li>المناقشة الموجهة: تحليل بداية الانتقال ونهايته في كل مثال.</li></ul></div>
+    </section><section class="noor-section" id="lesson-23-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-23-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يراجع المعلم مخازن الطاقة التي سبقت، ثم يسأل: عندما يحدث تغير، هل تبقى الطاقة في المخزن نفسه أم تنتقل؟</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-23-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-23-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: اختيار مثال من الدروس السابقة وتحديد مخزن الطاقة قبل حدوث التغير.</span></li><li><span class="time-pill">٩ دقائق</span><span>شرح موجه: يوضح المعلم الفرق بين «مخزن الطاقة» و«نقل الطاقة» باستخدام الأمثلة والرسوم الواردة في كتاب الطالب.</span></li><li><span class="time-pill">١٤ دقائق</span><span>نشاط ٦-٣ «انتقال الطاقة»: يتتبع الطلاب الأمثلة المحددة ويبينون من أين تنتقل الطاقة وإلى أين/كيف يظهر أثر الانتقال بحسب المطلوب في النشاط.</span></li><li><span class="time-pill">٨ دقائق</span><span>تطبيق: تنفيذ تمرين ٦-٣ «تخزين الطاقة ونقلها» من كتاب النشاط، مع مراجعة كل بند على أنه مخزن أم انتقال.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يصف كل طالب مثالًا واحدًا بصيغة «كانت الطاقة مخزنة في… ثم انتقلت إلى/بواسطة…».</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-23-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-23-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما الفرق بين تخزين الطاقة ونقلها في مثال من الدرس؟</li><li>في نشاط ٦-٣: أين تبدأ الطاقة في المثال المحدد وأين يظهر أثر انتقالها؟</li><li>من تمرين ٦-٣: صنف عبارة واحدة إلى «تخزين» أو «نقل» وعلل.</li><li>أعط مثالًا من الدرس على انتقال الطاقة.</li></ul></div>
+    </section><section class="noor-section" id="lesson-23-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-23-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>رسم سهم واحد على مخطط مثال من الكتاب وتسمية البداية والنهاية بما يتفق مع النشاط.</p></div>
+    </section><section class="noor-section" id="lesson-23-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-23-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٦-٣ «تخزين الطاقة ونقلها».</p></div>
+    </section><section class="noor-section" id="lesson-23-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-23-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: استخدام مثال واحد من نشاط ٦-٣ ورسم سهم انتقال واضح. الإثراء: مقارنة مثالين من النشاط من حيث المخزن الأول وكيف ظهر انتقال الطاقة.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-24" data-index="23" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>٧-٣ - توصيل الحرارة</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-24')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-24-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-24-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم واستقصاء ومقارنة مواد</p><ul><li>يصف توصيل الحرارة بوصفه طريقة لنقل الطاقة الحرارية كما يوضح الدرس.</li><li>يقارن موادًا/فلزات في قدرتها على توصيل الحرارة من نتائج النشاط.</li><li>يستخدم الملاحظة من نشاط ٧-٣(أ) أو ٧-٣(ب) لتحديد الموصل الأفضل.</li></ul></div>
+    </section><section class="noor-section" id="lesson-24-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-24-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>الاستقصاء العملي: نشاط ٧-٣(أ) «مقارنة بين الفلزات».</li><li>الملاحظة العملية: نشاط ٧-٣(ب) «انصهار الثلج».</li><li>التطبيق الحياتي: ورقة العمل ٧-٣ «الشعور بالحرارة، الشعور بالبرودة».</li></ul></div>
+    </section><section class="noor-section" id="lesson-24-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-24-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم أمثلة مواد من الدرس ويسأل: لماذا نشعر أن بعض المواد تنقل الحرارة أسرع من غيرها؟ ثم يطلب التحقق عمليًا.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-24-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-24-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: تعريف التوصيل الحراري من نص الكتاب وتحديد أنه مقارنة في سرعة/سهولة انتقال الطاقة الحرارية عبر المادة.</span></li><li><span class="time-pill">١٥ دقائق</span><span>نشاط ٧-٣(أ) «مقارنة بين الفلزات»: تنفذ المجموعات الخطوات، تحافظ على شروط المقارنة نفسها، وتسجل ترتيب/زمن الاستجابة المطلوب لكل فلز.</span></li><li><span class="time-pill">١٠ دقائق</span><span>نشاط ٧-٣(ب) «انصهار الثلج»: يلاحظ الطلاب انصهار الثلج على المواد المحددة ويستخدمون الملاحظة لمقارنة التوصيل كما يطلب النشاط.</span></li><li><span class="time-pill">٦ دقائق</span><span>تطبيق: مناقشة الأسئلة ١-٣ ثم جزء من ورقة العمل ٧-٣ «الشعور بالحرارة، الشعور بالبرودة» لربط الإحساس بسرعة انتقال الحرارة.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يحدد كل طالب المادة/الفلز الأفضل توصيلًا في النشاط ويذكر الدليل من النتيجة لا من التوقع.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-24-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-24-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما المقصود بالتوصيل الحراري في هذا الدرس؟</li><li>أي فلز/مادة أعطى دليلًا على توصيل أسرع في نشاط ٧-٣(أ)؟</li><li>ماذا لاحظت في نشاط ٧-٣(ب) «انصهار الثلج»؟</li><li>من ورقة العمل ٧-٣: كيف ترتبط سرعة انتقال الحرارة بالشعور بالحرارة أو البرودة في المثال؟</li></ul></div>
+    </section><section class="noor-section" id="lesson-24-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-24-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعود المعلم إلى سؤال التهيئة ويطلب إجابة مدعومة بنتيجة من أحد النشاطين.</p></div>
+    </section><section class="noor-section" id="lesson-24-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-24-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال الأسئلة ١-٣ وورقة العمل ٧-٣ «الشعور بالحرارة، الشعور بالبرودة» إذا حددها المعلم.</p></div>
+    </section><section class="noor-section" id="lesson-24-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-24-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: استخدام نتيجتين واضحتين فقط من النشاط للمقارنة. الإثراء: ترتيب المواد التي اختُبرت من الأفضل إلى الأقل توصيلًا اعتمادًا على نتائج المجموعة.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-25" data-index="24" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>٨-٣ - الحمل الحراري</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-25')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-25-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-25-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وملاحظة وتفسير</p><ul><li>يصف الحمل الحراري بوصفه طريقة لنقل الطاقة في السوائل/الغازات وفق الدرس.</li><li>يرصد حركة المائع في نشاط ٨-٣ «ملاحظة تيار الحمل الحراري».</li><li>يفسر اتجاه الحركة بالاعتماد على التسخين كما يوضحه الكتاب.</li></ul></div>
+    </section><section class="noor-section" id="lesson-25-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-25-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>العرض/الاستقصاء العملي: نشاط ٨-٣ «ملاحظة تيار الحمل الحراري».</li><li>الرسم العلمي: تمثيل اتجاه التيار بأسهم.</li><li>التفسير الموجه: الربط بين الملاحظة ونقل الطاقة الحرارية.</li></ul></div>
+    </section><section class="noor-section" id="lesson-25-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-25-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم شكل تيارات الحمل في كتاب الطالب ويسأل: كيف نعرف أن المائع يتحرك عند التسخين؟ ثم يؤجل التفسير إلى ما بعد الملاحظة.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-25-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-25-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: مراجعة التوصيل ثم تقديم الحمل الحراري باعتباره طريقة أخرى لنقل الطاقة الحرارية في المائع.</span></li><li><span class="time-pill">٨ دقائق</span><span>إعداد النشاط: قراءة تعليمات نشاط ٨-٣ «ملاحظة تيار الحمل الحراري»، وتحديد ما سيلاحظه الطلاب ومكان التسخين وإجراءات السلامة.</span></li><li><span class="time-pill">١٦ دقائق</span><span>تنفيذ النشاط: يراقب الطلاب حركة المائع/المؤشر المرئي كما تحدد الخطوات، ويسجلون اتجاه الحركة باستخدام كلمات أو أسهم دون تحريك الجهاز بطريقة تغير النتيجة.</span></li><li><span class="time-pill">٧ دقائق</span><span>تطبيق: تنفيذ تمرين ٨-٣ «استقصاء الحمل الحراري» من كتاب النشاط ومناقشة الأسئلة ١-٤ التي تربط الرسم بالمشاهدة.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يرسم الطالب مسارًا مبسطًا لتيار الحمل ويضع سهمًا صحيحًا على الجزء الذي شاهده في النشاط.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-25-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-25-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>أين يحدث الحمل الحراري بحسب الدرس؟</li><li>ما الذي شاهدته يتحرك في نشاط ٨-٣؟</li><li>كيف مثلت اتجاه الحركة في الرسم؟</li><li>من تمرين ٨-٣: فسّر جزءًا من تيار الحمل اعتمادًا على التسخين.</li></ul></div>
+    </section><section class="noor-section" id="lesson-25-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-25-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>مقارنة سريعة: «التوصيل» في الدرس السابق و«الحمل» في هذا الدرس من حيث نوع الوسط/طريقة الملاحظة كما يعرض الكتاب.</p></div>
+    </section><section class="noor-section" id="lesson-25-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-25-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٨-٣ «استقصاء الحمل الحراري» والأسئلة ١-٤.</p></div>
+    </section><section class="noor-section" id="lesson-25-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-25-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: استخدام رسم النشاط نفسه ووضع الأسهم قبل كتابة التفسير. الإثراء: وصف دورة تيار الحمل كاملة من الرسم إذا كانت موضحة في كتاب الطالب.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-26" data-index="25" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>٩-٣ - الإشعاع</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-26')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-26-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-26-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم ومقارنة طرائق نقل الطاقة</p><ul><li>يتعرف الإشعاع بوصفه طريقة لنقل الطاقة الحرارية ضمن الدرس.</li><li>يميز الإشعاع عن التوصيل والحمل في الأمثلة الواردة.</li><li>يطبق المقارنة في نشاط ٩-٣ وورقة العمل ٩-٣.</li></ul></div>
+    </section><section class="noor-section" id="lesson-26-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-26-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>المقارنة الثلاثية: التوصيل والحمل الحراري والإشعاع.</li><li>التطبيق: نشاط ٩-٣ «التوصيل والحمل الحراري والإشعاع».</li><li>حل المشكلات: ورقة العمل ٩-٣ «الترموس».</li></ul></div>
+    </section><section class="noor-section" id="lesson-26-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-26-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم مثال الشمس/المصدر الحراري من الكتاب ويسأل: كيف تصل الطاقة الحرارية عبر مكان لا يحدث فيه توصيل مباشر أو تيار مائع؟</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-26-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-26-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: مراجعة التوصيل والحمل وتحديد ما يحتاج كل منهما من وسط/حركة بحسب درسيهما.</span></li><li><span class="time-pill">٩ دقائق</span><span>شرح موجه: تقديم الإشعاع بالطريقة والرسوم الواردة في كتاب الطالب، مع إبراز الفروق التي يذكرها الدرس بين طرق النقل الثلاث.</span></li><li><span class="time-pill">١٣ دقائق</span><span>نشاط ٩-٣ «التوصيل والحمل الحراري والإشعاع»: يصنف الطلاب الأمثلة المحددة وفق طريقة نقل الطاقة ويذكرون دليل الاختيار.</span></li><li><span class="time-pill">٩ دقائق</span><span>تطبيق: تنفيذ تمرين ٩-٣ «تفسيرات الإشعاع» وقراءة/حل جزء من ورقة العمل ٩-٣ «الترموس» لتحديد أين يُقلل كل نوع من انتقال الحرارة كما يطلب السؤال.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يجيب الطلاب عن الأسئلة ١-٣، ثم يكملون جدولًا شفهيًا: توصيل - حمل - إشعاع، مثال واحد لكل طريقة.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-26-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-26-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما المقصود بالإشعاع في سياق الدرس؟</li><li>كيف يختلف الإشعاع عن الحمل الحراري في مثال الكتاب؟</li><li>صنف مثالًا من نشاط ٩-٣ إلى توصيل أو حمل أو إشعاع واذكر السبب.</li><li>من ورقة العمل ٩-٣ «الترموس»: أي طريقة نقل حرارة يناقشها الجزء المحدد؟</li></ul></div>
+    </section><section class="noor-section" id="lesson-26-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-26-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يذكر المعلم ثلاثة أمثلة من نشاط ٩-٣، ويرفع الطلاب اسم طريقة النقل الصحيحة ثم يبرر طالب واحد كل اختيار.</p></div>
+    </section><section class="noor-section" id="lesson-26-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-26-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ٩-٣ «تفسيرات الإشعاع» وورقة العمل ٩-٣ «الترموس» إذا كانت مقررة.</p></div>
+    </section><section class="noor-section" id="lesson-26-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-26-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: تصنيف ثلاثة أمثلة واضحة، مثال لكل طريقة نقل. الإثراء: تحليل الترموس في ورقة العمل وتحديد أكثر من طريقة لتقليل انتقال الطاقة كما تسمح أسئلة الورقة.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-27" data-index="26" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>١٠-٣ - الأشكال المتغيرة للطاقة</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-27')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-27-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-27-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتحليل تحولات الطاقة</p><ul><li>يتتبع تغير شكل/مخزن الطاقة في سلسلة من الأحداث كما يعرض الدرس.</li><li>يصف تحولات الطاقة في لعبة الأفعوانية من النشاط ١٠-٣(أ).</li><li>يمثل تحويل الطاقة في أمثلة النشاط ١٠-٣(ب) وورقة العمل.</li></ul></div>
+    </section><section class="noor-section" id="lesson-27-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-27-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>تحليل السلسلة: نشاط ١٠-٣(أ) «تغيرات الطاقة في لعبة الأفعوانية».</li><li>التطبيق المتعدد: نشاط ١٠-٣(ب) «تغيرات الطاقة».</li><li>التقويم بالمخطط: ورقتا العمل ١٠-٣(أ) «أشكال الطاقة» و١٠-٣(ب) «تحويل الطاقة».</li></ul></div>
+    </section><section class="noor-section" id="lesson-27-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-27-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم صورة الأفعوانية في الكتاب ويسأل: هل تبقى الطاقة في الشكل/المخزن نفسه طوال الحركة؟ ثم يطلب تتبعها نقطة بنقطة.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-27-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-27-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: مراجعة مخازن الطاقة وطاقة الحركة، ثم تحديد نقاط مختلفة على صورة الأفعوانية.</span></li><li><span class="time-pill">١٢ دقائق</span><span>نشاط ١٠-٣(أ) «تغيرات الطاقة في لعبة الأفعوانية»: يتتبع الطلاب ما يحدث للطاقة في المواقع المحددة، ويصفون التغير بالترتيب الذي يطلبه النشاط.</span></li><li><span class="time-pill">١١ دقائق</span><span>نشاط ١٠-٣(ب) «تغيرات الطاقة»: تطبق المجموعات فكرة التحول على أمثلة إضافية، وتستخدم الأسهم لتمثيل التسلسل إذا كان ذلك ضمن النشاط.</span></li><li><span class="time-pill">٨ دقائق</span><span>تطبيق وتقويم: استخدام ورقة العمل ١٠-٣(أ) «أشكال الطاقة» ثم ١٠-٣(ب) «تحويل الطاقة» في البنود المحددة، مع مراجعة السؤالين ١ و٢ من الكتاب.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يختار طالب مثالًا من النشاط ويصف بداية السلسلة ونهايتها بكلمات صحيحة.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-27-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-27-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>في الأفعوانية، كيف تتغير الطاقة بين نقطتين محددتين في النشاط؟</li><li>ما شكل/مخزن الطاقة الذي يزداد عند زيادة الحركة وفق المثال؟</li><li>من نشاط ١٠-٣(ب): اكتب سلسلة تحول واحدة بالأسهم.</li><li>من ورقة العمل ١٠-٣(ب): صحح تحويلًا غير صحيح إذا ظهر في البند المحدد.</li></ul></div>
+    </section><section class="noor-section" id="lesson-27-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-27-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>رسم سلسلة قصيرة من صندوقين أو ثلاثة تمثل تحول طاقة من مثال الدرس، ثم مراجعتها مع الشكل في الكتاب.</p></div>
+    </section><section class="noor-section" id="lesson-27-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-27-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال ورقتي العمل ١٠-٣(أ) و١٠-٣(ب) حسب ما حدده المعلم، ومراجعة السؤالين ١ و٢.</p></div>
+    </section><section class="noor-section" id="lesson-27-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-27-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: تتبع مثال الأفعوانية فقط مع سهم واحد في كل مرة. الإثراء: تمثيل مثال ثانٍ من نشاط ١٠-٣(ب) بسلسلة تحول كاملة ومقارنته بالأفعوانية.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-28" data-index="27" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>١١-٣ - حفظ الطاقة</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-28')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-28-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-28-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتطبيق مفهوم الحفظ</p><ul><li>يوضح أن الطاقة لا تُفقد بل تنتقل أو تتغير صورتها وفق مفهوم الحفظ في الدرس.</li><li>يتتبع الطاقة في نظام/مثال دون حذف الأجزاء التي تنتقل إلى المحيط.</li><li>يعرض فكرة الحفظ في نشاط ١١-٣ «ملصق الطاقة».</li></ul></div>
+    </section><section class="noor-section" id="lesson-28-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-28-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>المناقشة الاستدلالية: تتبع «أين ذهبت الطاقة؟».</li><li>التعلم بالمشروع القصير: نشاط ١١-٣ «ملصق الطاقة».</li><li>القراءة التطبيقية: ورقة العمل ١١-٣ «ميزان جيمس جول لقياس الحرارة».</li></ul></div>
+    </section><section class="noor-section" id="lesson-28-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-28-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم مثالًا تتحول فيه الطاقة إلى حركة وحرارة ويسأل: إذا قل شكل من أشكال الطاقة، هل اختفت الطاقة أم انتقلت/تحولت؟</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-28-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-28-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: مراجعة التحولات في الدرس السابق وطرح سؤال «أين ذهبت الطاقة؟» في مثال من الكتاب.</span></li><li><span class="time-pill">١٠ دقائق</span><span>شرح موجه: قراءة مفهوم حفظ الطاقة كما يقدمه كتاب الطالب، وتتبع جميع مخرجات/تحولات الطاقة في مثال واحد.</span></li><li><span class="time-pill">١٤ دقائق</span><span>نشاط ١١-٣ «ملصق الطاقة»: ينظم الطلاب ملصقًا يوضح سلسلة/أمثلة حفظ الطاقة وفق عناصر النشاط، مع أسهم وعبارات قصيرة صحيحة.</span></li><li><span class="time-pill">٧ دقائق</span><span>تطبيق: مراجعة السؤالين ١ و٢ ثم قراءة الجزء المطلوب من ورقة العمل ١١-٣ «ميزان جيمس جول لقياس الحرارة» وربطه بفكرة التحول إلى حرارة.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يعرض طالبان جزءًا من الملصق ويشرحان كيف يوضح أن الطاقة لم تختف بل تغيرت أو انتقلت.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-28-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-28-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما المقصود بحفظ الطاقة كما عرضه الدرس؟</li><li>في المثال المحدد، أين انتقلت الطاقة التي لم تعد في صورة الحركة؟</li><li>كيف يوضح ملصق ١١-٣ سلسلة التحولات؟</li><li>ما الصلة بين الحرارة وفكرة حفظ الطاقة في ورقة العمل ١١-٣؟</li></ul></div>
+    </section><section class="noor-section" id="lesson-28-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-28-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يكتب الطلاب عبارة «الطاقة لا تختفي؛ بل…» ويكملونها بمثال من الدرس.</p></div>
+    </section><section class="noor-section" id="lesson-28-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-28-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال نشاط ١١-٣ «ملصق الطاقة» أو السؤالين ١ و٢ إذا لم يكتمل.</p></div>
+    </section><section class="noor-section" id="lesson-28-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-28-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: تتبع مثال واحد باستخدام الأسهم حتى تظهر جميع التحولات. الإثراء: تفسير أين تظهر الطاقة الحرارية في مثال ورقة العمل ١١-٣ ضمن سلسلة الحفظ.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-29" data-index="28" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>١٢-٣ - كيف نستخدم الطاقة؟</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-29')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-29-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-29-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> قراءة بيانات ومقارنة واستنتاج</p><ul><li>يقرأ بيانات/معلومات عن استخدام الطاقة كما يقدمها الدرس.</li><li>يقارن استخدام الطاقة بين أمثلة/دول محددة، ومنها الصين والولايات المتحدة الأمريكية في النشاط.</li><li>يستخلص استنتاجًا تدعمه البيانات بدل الاعتماد على الانطباع.</li></ul></div>
+    </section><section class="noor-section" id="lesson-29-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-29-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>قراءة البيانات: استخراج قيم/اتجاهات من جدول أو رسم الدرس.</li><li>التعلم التعاوني: نشاط ١٢-٣ «الطاقة في الصين والولايات المتحدة الأمريكية».</li><li>المقارنة القائمة على الدليل: كتابة جمل مقارنة مدعومة بالبيانات.</li></ul></div>
+    </section><section class="noor-section" id="lesson-29-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-29-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم الجدول/الرسم في كتاب الطالب دون تفسير ويطلب من الطلاب تحديد العناوين والوحدات وما الذي تتم مقارنته.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-29-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-29-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: قراءة عناصر الجدول/الرسم: العنوان، الفئات، القيم، ثم تحديد سؤال مقارنة بسيط.</span></li><li><span class="time-pill">٩ دقائق</span><span>تدريب موجه: يختار المعلم قيمتين من بيانات كتاب الطالب ويبين كيف تصاغ مقارنة صحيحة دون إضافة أسباب غير موجودة في البيانات.</span></li><li><span class="time-pill">١٦ دقائق</span><span>نشاط ١٢-٣ «الطاقة في الصين والولايات المتحدة الأمريكية»: تعمل المجموعات على الأسئلة/البيانات المحددة، تستخرج القيم المطلوبة، وتحسب/تقارن وفق تعليمات النشاط.</span></li><li><span class="time-pill">٦ دقائق</span><span>تحليل: تكتب كل مجموعة استنتاجين مدعومين بقيم أو اتجاهات من النشاط، ثم تتحقق مجموعة أخرى من صحة الدليل.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يقرأ طالبان مقارنة صحيحة، ويطلب المعلم تحديد رقم/بيان النشاط الذي يدعم كل مقارنة.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-29-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-29-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما الذي يقارنه جدول/رسم النشاط ١٢-٣؟</li><li>استخرج قيمة واحدة للصين وقيمة واحدة للولايات المتحدة الأمريكية من الجزء المطلوب.</li><li>اكتب جملة مقارنة تستخدم القيم لا كلمات عامة فقط.</li><li>هل استنتاج المجموعة مدعوم بالبيانات؟ حدد الدليل.</li></ul></div>
+    </section><section class="noor-section" id="lesson-29-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-29-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>بطاقة خروج: «أحد الاستنتاجات التي تدعمها البيانات هو… والدليل…».</p></div>
+    </section><section class="noor-section" id="lesson-29-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-29-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال أسئلة/جدول نشاط ١٢-٣ «الطاقة في الصين والولايات المتحدة الأمريكية» كما هو محدد في كتاب الطالب.</p></div>
+    </section><section class="noor-section" id="lesson-29-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-29-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: تحديد صف/عمود واحد ثم استخراج قيمتين فقط. الإثراء: كتابة أكثر من مقارنة من البيانات مع التمييز بين «المعلومة من الجدول» و«الاستنتاج».</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-30" data-index="29" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>١٣-٣ - الوقود الأحفوري</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-30')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-30-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-30-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتسلسل وتحليل</p><ul><li>يتعرف أنواع الوقود الأحفوري التي يقدمها الدرس واستخدامها كمصادر للطاقة.</li><li>يتتبع بصورة مبسطة كيف يتشكل الوقود الأحفوري وفق كتاب النشاط.</li><li>يربط استخدام الوقود الأحفوري بتغيرات الطاقة في نشاط ١٣-٣.</li></ul></div>
+    </section><section class="noor-section" id="lesson-30-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-30-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>التسلسل: تمرين ١٣-٣ «كيف تشكل الوقود الأحفوري؟» في كتاب النشاط.</li><li>تحليل التحول: نشاط ١٣-٣ «تغيرات الطاقة».</li><li>المناقشة الموجهة: استخدام صور/أمثلة الوقود في كتاب الطالب.</li></ul></div>
+    </section><section class="noor-section" id="lesson-30-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-30-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم صور أنواع الوقود الأحفوري في الدرس ويسأل الطلاب عما يعرفونه، ثم يحصر الإجابات في المعلومات التي يؤكدها الكتاب.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-30-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-30-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: تسمية أنواع الوقود الأحفوري في صور/نص كتاب الطالب وتحديد أنها مصادر مرتبطة بمخازن الطاقة الكيميائية.</span></li><li><span class="time-pill">٩ دقائق</span><span>شرح موجه: قراءة تكون الوقود الأحفوري واستخدامه بالمستوى الذي يقدمه الدرس، مع ترتيب المراحل الأساسية دون تفاصيل إضافية.</span></li><li><span class="time-pill">١٢ دقائق</span><span>نشاط ١٣-٣ «تغيرات الطاقة»: يتتبع الطلاب سلسلة الطاقة عند استخدام الوقود في المثال المحدد، ويحددون التحولات/الانتقالات التي يطلبها النشاط.</span></li><li><span class="time-pill">١٠ دقائق</span><span>كتاب النشاط: تنفيذ تمرين ١٣-٣ «كيف تشكل الوقود الأحفوري؟» بترتيب الخطوات/الصور أو إكمال الأسئلة كما هي في التمرين.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: إجابة مختارة من الأسئلة ١-٤ ثم ترتيب ثلاث مراحل رئيسة من تمرين تكوّن الوقود.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-30-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-30-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>اذكر نوعين من الوقود الأحفوري من الدرس.</li><li>رتب المراحل المطلوبة في تمرين ١٣-٣ «كيف تشكل الوقود الأحفوري؟».</li><li>في نشاط ١٣-٣: ما التحول أو الانتقال الرئيس للطاقة في المثال؟</li><li>أجب عن سؤال من الأسئلة ١-٤ يربط الوقود بالطاقة.</li></ul></div>
+    </section><section class="noor-section" id="lesson-30-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-30-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>يذكر الطلاب «مصدر/وقود - مخزن الطاقة - استخدام/تحول» لمثال واحد من الدرس.</p></div>
+    </section><section class="noor-section" id="lesson-30-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-30-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ١٣-٣ «كيف تشكل الوقود الأحفوري؟» ومراجعة الأسئلة ١-٤.</p></div>
+    </section><section class="noor-section" id="lesson-30-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-30-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: ترتيب صور/عبارات التمرين قبل كتابة شرح. الإثراء: دمج تسلسل تكوّن الوقود مع سلسلة تغيرات الطاقة عند استخدامه في مخططين منفصلين ثم بيان الفرق بينهما.</p></div>
+    </section>
+    </article><article class="lesson-card" id="lesson-31" data-index="30" data-unit="3" hidden>
+      <div class="lesson-titlebar">
+        <div><span class="unit-kicker">الوحدة الثالثة: الطاقة</span><h2>١٤-٣ - مصادر الطاقة المتجددة وغير المتجددة</h2></div>
+        <div class="lesson-actions"><span class="duration">زمن الحصة: ٤٠ دقيقة</span><button type="button" class="copy-all" onclick="copyLesson('lesson-31')">نسخ جميع بنود الدرس</button></div>
+      </div>
+      <section class="noor-section" id="lesson-31-s1">
+      <div class="section-head"><h3>١. المخرجات التعليمية + المستوى</h3><button class="copy-btn" type="button" onclick="copySection('lesson-31-s1')">نسخ البند</button></div>
+      <div class="copy-content"><p class="level"><strong>المستوى:</strong> فهم وتصنيف وتقييم أدلة</p><ul><li>يميز بين مصادر الطاقة المتجددة وغير المتجددة كما يعرفها الدرس.</li><li>يصنف مصادر الطاقة المعروضة في الكتاب إلى الفئتين.</li><li>يناقش استخدام مصادر الطاقة في ضوء المعلومات المعطاة وينجز تمرين ١٤-٣ «مستقبل الطاقة».</li></ul></div>
+    </section><section class="noor-section" id="lesson-31-s2">
+      <div class="section-head"><h3>٢. الاستراتيجيات وطرق التدريس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-31-s2')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>التصنيف: فرز مصادر الطاقة إلى متجددة وغير متجددة.</li><li>المناقشة القائمة على المعلومات: مقارنة مزايا/قيود الأمثلة الواردة فقط.</li><li>التطبيق: تمرين ١٤-٣ «مستقبل الطاقة» وورقتا العمل ١٤-٣(أ)، ١٤-٣(ب).</li></ul></div>
+    </section><section class="noor-section" id="lesson-31-s3">
+      <div class="section-head"><h3>٣. التهيئة والتعلم القبلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-31-s3')">نسخ البند</button></div>
+      <div class="copy-content"><p>يعرض المعلم أسماء/صور مصادر الطاقة الواردة في الدرس ويطلب من الطلاب تصنيفًا أوليًا إلى «متجدد» و«غير متجدد»، ثم يطلب التحقق من التعريف في الكتاب.</p><p class="time-note"><strong>زمن التهيئة داخل إجراءات سير الدرس:</strong> ٥ دقائق تقريبًا بحسب توزيع الخطوات.</p></div>
+    </section><section class="noor-section" id="lesson-31-s4">
+      <div class="section-head"><h3>٤. إجراءات سير الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-31-s4')">نسخ البند</button></div>
+      <div class="copy-content"><ol class="steps"><li><span class="time-pill">٥ دقائق</span><span>تهيئة: قراءة تعريف «متجدد» و«غير متجدد» وتصحيح التصنيف الأولي وفق التعريف.</span></li><li><span class="time-pill">١٠ دقائق</span><span>بناء المفهوم: مناقشة أمثلة المصادر التي يقدمها كتاب الطالب، وذكر المعلومات المرتبطة بكل مصدر دون إضافة مصادر أو أرقام غير موجودة.</span></li><li><span class="time-pill">١١ دقائق</span><span>تطبيق: تنفيذ تمرين ١٤-٣ «مستقبل الطاقة»؛ يقرأ الطلاب المعلومات/السيناريو ويجيبون عن الأسئلة التي تتطلب اختيارًا أو تفسيرًا اعتمادًا على المعطيات.</span></li><li><span class="time-pill">١٠ دقائق</span><span>ورقة عمل وتقويم: استخدام ورقة العمل ١٤-٣(أ) «استخدام مصادر الطاقة المتجددة»، ثم ١٤-٣(ب) «استخدام مصادر الطاقة المتجددة - تقييم التعلم» لقياس التصنيف والتفسير.</span></li><li><span class="time-pill">٤ دقائق</span><span>غلق: يجيب الطلاب عن سؤالين من الأسئلة ١-٤؛ أحدهما تصنيف والآخر تفسير استخدام مصدر وفق بيانات/معلومات الدرس.</span></li></ol><p class="total-time"><strong>إجمالي زمن الحصة:</strong> ٤٠ دقيقة.</p></div>
+    </section><section class="noor-section" id="lesson-31-s5">
+      <div class="section-head"><h3>٥. التقويم التكويني</h3><button class="copy-btn" type="button" onclick="copySection('lesson-31-s5')">نسخ البند</button></div>
+      <div class="copy-content"><ul><li>ما الفرق بين المصدر المتجدد وغير المتجدد وفق تعريف الكتاب؟</li><li>صنف مصدرين من أمثلة الدرس واذكر سبب التصنيف.</li><li>من تمرين ١٤-٣ «مستقبل الطاقة»: ما الاختيار الذي تؤيده المعطيات في السؤال؟</li><li>من ورقة العمل ١٤-٣(ب): اذكر الدليل الذي يدعم إجابتك عن استخدام المصدر المتجدد.</li></ul></div>
+    </section><section class="noor-section" id="lesson-31-s6">
+      <div class="section-head"><h3>٦. التقويم الختامي وغلق الدرس</h3><button class="copy-btn" type="button" onclick="copySection('lesson-31-s6')">نسخ البند</button></div>
+      <div class="copy-content"><p>مراجعة ختامية للوحدة: يذكر الطالب مصدرًا متجددًا وآخر غير متجدد، ثم يربط أحدهما بمفهوم مخزن/نقل الطاقة الذي درسه في الوحدة.</p></div>
+    </section><section class="noor-section" id="lesson-31-s7">
+      <div class="section-head"><h3>٧. الواجب المنزلي</h3><button class="copy-btn" type="button" onclick="copySection('lesson-31-s7')">نسخ البند</button></div>
+      <div class="copy-content"><p>إكمال تمرين ١٤-٣ «مستقبل الطاقة» وورقة العمل ١٤-٣(ب) إذا لم تكتمل.</p></div>
+    </section><section class="noor-section" id="lesson-31-s8">
+      <div class="section-head"><h3>٨. الدعم العلاجي والإثراء والمتابعة</h3><button class="copy-btn" type="button" onclick="copySection('lesson-31-s8')">نسخ البند</button></div>
+      <div class="copy-content"><p>الدعم: استخدام جدول من عمودين وفرز أمثلة الكتاب فقط. الإثراء: المقارنة بين مصدرين من المعلومات الواردة في ورقة العمل ١٤-٣(أ) وتبرير الاختيار وفق الأدلة المعطاة.</p></div>
+    </section>
+    </article>
+</main>
+<div id="toast" class="toast" role="status" aria-live="polite">تم النسخ</div>
+<script>
+const lessonData = [{"unit": 1, "code": "١-١", "title": "أعضاء النبات"}, {"unit": 1, "code": "٢-١", "title": "الأزهار"}, {"unit": 1, "code": "٣-١", "title": "التلقيح"}, {"unit": 1, "code": "٤-١", "title": "الإخصاب"}, {"unit": 1, "code": "٥-١", "title": "الثمار"}, {"unit": 1, "code": "٦-١", "title": "أجهزة جسم الإنسان"}, {"unit": 1, "code": "٧-١", "title": "الهيكل العظمي للإنسان"}, {"unit": 1, "code": "٨-١", "title": "المفاصل"}, {"unit": 1, "code": "٩-١", "title": "العضلات"}, {"unit": 1, "code": "١٠-١", "title": "دراسة جسم الإنسان"}, {"unit": 2, "code": "١-٢", "title": "المواد الصلبة والسائلة والغازية"}, {"unit": 2, "code": "٢-٢", "title": "نظرية الجزيئات"}, {"unit": 2, "code": "٣-٢", "title": "تغير الحالة"}, {"unit": 2, "code": "٤-٢", "title": "تفسير تغيرات الحالة"}, {"unit": 2, "code": "٥-٢", "title": "الانتشار"}, {"unit": 2, "code": "٦-٢", "title": "استقصاء الانتشار"}, {"unit": 2, "code": "٧-٢", "title": "ضغط الغاز"}, {"unit": 3, "code": "١-٣", "title": "استخدام الطاقة"}, {"unit": 3, "code": "٢-٣", "title": "المخازن الكيميائية للطاقة"}, {"unit": 3, "code": "٣-٣", "title": "مخازن أخرى للطاقة"}, {"unit": 3, "code": "٤-٣", "title": "طاقة الحركة"}, {"unit": 3, "code": "٥-٣", "title": "الطاقة الحرارية"}, {"unit": 3, "code": "٦-٣", "title": "نقل الطاقة"}, {"unit": 3, "code": "٧-٣", "title": "توصيل الحرارة"}, {"unit": 3, "code": "٨-٣", "title": "الحمل الحراري"}, {"unit": 3, "code": "٩-٣", "title": "الإشعاع"}, {"unit": 3, "code": "١٠-٣", "title": "الأشكال المتغيرة للطاقة"}, {"unit": 3, "code": "١١-٣", "title": "حفظ الطاقة"}, {"unit": 3, "code": "١٢-٣", "title": "كيف نستخدم الطاقة؟"}, {"unit": 3, "code": "١٣-٣", "title": "الوقود الأحفوري"}, {"unit": 3, "code": "١٤-٣", "title": "مصادر الطاقة المتجددة وغير المتجددة"}];
+const unitSelect=document.getElementById('unitSelect');
+const lessonSelect=document.getElementById('lessonSelect');
+let currentIndex=0;
+function arabicDigits(s){return String(s).replace(/[0-9]/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);}
+function lessonsForUnit(u){return lessonData.map((x,i)=>({...x,index:i})).filter(x=>x.unit===Number(u));}
+function fillLessonSelect(preferredIndex){
+  const arr=lessonsForUnit(unitSelect.value); lessonSelect.innerHTML='';
+  arr.forEach(x=>{const o=document.createElement('option');o.value=x.index;o.textContent=x.code+' - '+x.title;lessonSelect.appendChild(o);});
+  const exists=arr.some(x=>x.index===preferredIndex); currentIndex=exists?preferredIndex:(arr[0]?.index??0); lessonSelect.value=String(currentIndex); showLesson(currentIndex);
+}
+function showLesson(i){
+  document.querySelectorAll('.lesson-card').forEach(el=>el.hidden=true);
+  const el=document.querySelector('.lesson-card[data-index="'+i+'"]'); if(!el)return;
+  el.hidden=false; currentIndex=Number(i); const d=lessonData[currentIndex]; unitSelect.value=String(d.unit);
+  if([...lessonSelect.options].some(o=>Number(o.value)===currentIndex)) lessonSelect.value=String(currentIndex);
+  localStorage.setItem('noorScience7Lesson',String(currentIndex));
+  document.getElementById('prevBtn').disabled=currentIndex<=0;
+  document.getElementById('nextBtn').disabled=currentIndex>=lessonData.length-1;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+unitSelect.addEventListener('change',()=>fillLessonSelect());
+lessonSelect.addEventListener('change',()=>showLesson(Number(lessonSelect.value)));
+document.getElementById('prevBtn').addEventListener('click',()=>{if(currentIndex>0){const ni=currentIndex-1;unitSelect.value=String(lessonData[ni].unit);fillLessonSelect(ni);}});
+document.getElementById('nextBtn').addEventListener('click',()=>{if(currentIndex<lessonData.length-1){const ni=currentIndex+1;unitSelect.value=String(lessonData[ni].unit);fillLessonSelect(ni);}});
+function cleanClone(source, headingText){
+  const wrap=document.createElement('div'); wrap.setAttribute('dir','rtl'); wrap.style.cssText='direction:rtl;text-align:right;font-family:Tahoma,Arial,sans-serif;line-height:1.9;color:#111;';
+  if(headingText){const h=document.createElement('h3');h.textContent=headingText;h.style.cssText='margin:0 0 8px;font-size:16px;';wrap.appendChild(h);}
+  const c=source.cloneNode(true); c.querySelectorAll('button').forEach(b=>b.remove()); c.querySelectorAll('[hidden]').forEach(n=>n.removeAttribute('hidden'));
+  c.style.cssText='direction:rtl;text-align:right;white-space:normal;word-break:normal;overflow-wrap:break-word;'; wrap.appendChild(c); return wrap;
+}
+function toPlain(el){
+  const clone=el.cloneNode(true);
+  clone.querySelectorAll('li').forEach(li=>{
+    li.insertAdjacentText('afterbegin','• ');
+    li.appendChild(document.createElement('br'));
+  });
+  clone.querySelectorAll('p,h2,h3,h4').forEach(n=>n.appendChild(document.createElement('br')));
+  let text=(clone.innerText||clone.textContent||'').replace(/\n{3,}/g,'\n\n').trim();
+  return text.split('\n').map(x=>'‏'+x).join('\n');
+}
+async function robustCopy(wrap){
+  document.body.appendChild(wrap); const html='<div dir="rtl" style="direction:rtl;text-align:right;font-family:Tahoma,Arial,sans-serif;line-height:1.9">'+wrap.innerHTML+'</div>'; const text=toPlain(wrap);
+  try{
+    if(navigator.clipboard && window.ClipboardItem){const item=new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})});await navigator.clipboard.write([item]);wrap.remove();toast('تم النسخ بشكل منظم');return;}
+  }catch(e){}
+  try{
+    const sel=window.getSelection();sel.removeAllRanges();const range=document.createRange();range.selectNodeContents(wrap);sel.addRange(range);const ok=document.execCommand('copy');sel.removeAllRanges();wrap.remove();if(ok){toast('تم النسخ بشكل منظم');return;}
+  }catch(e){}
+  const ta=document.createElement('textarea');ta.value=text;ta.setAttribute('dir','rtl');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();document.execCommand('copy');ta.remove();wrap.remove();toast('تم النسخ');
+}
+function copySection(id){const sec=document.getElementById(id);const content=sec.querySelector('.copy-content');const heading=sec.querySelector('h3').textContent;robustCopy(cleanClone(content,heading));}
+function copyLesson(id){
+  const card=document.getElementById(id); const wrap=document.createElement('div');wrap.setAttribute('dir','rtl');wrap.style.cssText='direction:rtl;text-align:right;font-family:Tahoma,Arial,sans-serif;line-height:1.9;color:#111;';
+  const h=document.createElement('h2');h.textContent=card.querySelector('h2').textContent;wrap.appendChild(h);
+  card.querySelectorAll('.noor-section').forEach(sec=>{const sh=document.createElement('h3');sh.textContent=sec.querySelector('h3').textContent;wrap.appendChild(sh);const c=sec.querySelector('.copy-content').cloneNode(true);wrap.appendChild(c);});robustCopy(wrap);
+}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1500);}
+const saved=Number(localStorage.getItem('noorScience7Lesson'));if(Number.isInteger(saved)&&saved>=0&&saved<lessonData.length){currentIndex=saved;unitSelect.value=String(lessonData[saved].unit);fillLessonSelect(saved);}else{fillLessonSelect(0);}
+</script>
+</body>
+</html>
