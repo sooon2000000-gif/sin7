@@ -2171,9 +2171,19 @@ const saved=Number(localStorage.getItem('noorScience7Lesson'));if(Number.isInteg
     var d=src.data||{}, p=src.parent||{};
     var blocks=[];
     if(Array.isArray(d.sections)){
-      d.sections.forEach(function(s){if(s&&s.label)blocks.push([s.label,s.value]);});
+      d.sections.forEach(function(s){
+        if(!s)return;
+        var label=s.label||s.name||s.title||'بند التحضير';
+        var value=(s.value!=null?s.value:(s.text!=null?s.text:s.content));
+        if(value!=null && value!=='')blocks.push([label,value]);
+      });
     } else if(Array.isArray(p.sections) && d===p){
-      p.sections.forEach(function(s){if(s&&s.label)blocks.push([s.label,s.value]);});
+      p.sections.forEach(function(s){
+        if(!s)return;
+        var label=s.label||s.name||s.title||'بند التحضير';
+        var value=(s.value!=null?s.value:(s.text!=null?s.text:s.content));
+        if(value!=null && value!=='')blocks.push([label,value]);
+      });
     } else {
       var map=[
         ['المخرجات التعليمية',d.outcomes||d.objectives||p.outcomes],
@@ -2364,6 +2374,91 @@ html.afuq-plan-lock,html.afuq-plan-lock body{overflow:hidden!important}
  #afuq-plan-overlay #afuq-official-plan table{min-width:620px;font-size:13px}
  #afuq-official-preps .afuq-prep-controls{top:0}
 }
+
+/* AFUQ_SCIENCE_RESPONSIVE_FIX_2026_09_28 */
+html,body{max-width:100%;overflow-x:hidden}
+#afuq-official-preps,#afuq-official-preps *{box-sizing:border-box}
+#afuq-official-preps{width:100%;max-width:100%;overflow-x:hidden}
+#afuq-official-preps .afuq-prep-shell{width:100%;min-width:0}
+#afuq-official-preps .afuq-prep-head{width:100%;min-width:0}
+#afuq-official-preps .afuq-prep-head>div{min-width:0}
+#afuq-official-preps .afuq-prep-head h2{overflow-wrap:anywhere;line-height:1.55}
+#afuq-official-preps .afuq-prep-count{white-space:normal;text-align:center}
+#afuq-official-preps .afuq-prep-controls{width:100%;min-width:0;align-items:stretch}
+#afuq-official-preps .afuq-prep-controls>*{min-width:0;max-width:100%}
+#afuq-official-preps .afuq-prep-controls label{display:flex;align-items:center;gap:8px}
+#afuq-official-preps .afuq-prep-controls select{min-width:0;max-width:100%}
+#afuq-official-preps #afuq-prep-jump{flex:1 1 360px;min-width:220px}
+#afuq-official-preps .afuq-prep-card{width:100%;min-width:0}
+#afuq-official-preps .afuq-card-head>div{min-width:0}
+#afuq-official-preps .afuq-card-head h2{overflow-wrap:anywhere;line-height:1.55}
+#afuq-official-preps .afuq-topic-heading{overflow-wrap:anywhere;line-height:1.55}
+#afuq-official-preps .afuq-prep-section,
+#afuq-official-preps .noor-section,
+#afuq-official-preps .sec,
+#afuq-official-preps .section{min-width:0;max-width:100%;overflow:hidden}
+#afuq-official-preps .afuq-sec-body,
+#afuq-official-preps .copy-content,
+#afuq-official-preps .content{overflow-wrap:anywhere;word-break:normal}
+@media(max-width:700px){
+  #afuq-official-preps{padding:6px!important}
+  #afuq-official-preps .afuq-prep-head{padding:14px 12px;gap:10px}
+  #afuq-official-preps .afuq-prep-head h2{font-size:20px!important}
+  #afuq-official-preps .afuq-prep-count{width:100%;font-size:14px}
+  #afuq-official-preps .afuq-prep-controls{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:8px;
+    padding:10px;
+    position:static!important;
+  }
+  #afuq-official-preps .afuq-prep-controls label{
+    grid-column:1/-1;
+    display:grid;
+    grid-template-columns:auto minmax(0,1fr);
+    align-items:center;
+    width:100%;
+  }
+  #afuq-official-preps #afuq-prep-jump{
+    grid-column:1/-1;
+    width:100%;
+    min-width:0;
+  }
+  #afuq-official-preps #afuq-prep-prev,
+  #afuq-official-preps #afuq-prep-next,
+  #afuq-official-preps #afuq-prep-full{
+    width:100%;
+    min-width:0;
+    padding:9px 4px;
+    white-space:nowrap;
+  }
+  #afuq-official-preps #afuq-plan-open{grid-column:1/-1;width:100%}
+  #afuq-official-preps select,
+  #afuq-official-preps button{max-width:100%;font-size:15px}
+  #afuq-official-preps .afuq-prep-card{padding:10px}
+  #afuq-official-preps .afuq-card-head{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto;
+    align-items:start!important;
+    gap:10px;
+  }
+  #afuq-official-preps .afuq-copy-all{
+    align-self:start;
+    padding:7px 9px!important;
+    font-size:13px!important;
+    white-space:nowrap;
+  }
+  #afuq-official-preps .afuq-prep-section,
+  #afuq-official-preps .noor-section,
+  #afuq-official-preps .sec,
+  #afuq-official-preps .section{padding:10px;margin:8px 0}
+  #afuq-official-preps .afuq-sec-head{align-items:flex-start;gap:8px}
+  #afuq-official-preps .afuq-sec-head h3{font-size:16px;line-height:1.55}
+  #afuq-official-preps .afuq-sec-body,
+  #afuq-official-preps .copy-content,
+  #afuq-official-preps .content{font-size:15px;line-height:1.85}
+}
+
 </style>
 <script>
 (function(){
