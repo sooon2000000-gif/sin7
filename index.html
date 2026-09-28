@@ -2139,5 +2139,203 @@ function copyLesson(id){
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1500);}
 const saved=Number(localStorage.getItem('noorScience7Lesson'));if(Number.isInteger(saved)&&saved>=0&&saved<lessonData.length){currentIndex=saved;unitSelect.value=String(lessonData[saved].unit);fillLessonSelect(saved);}else{fillLessonSelect(0);}
 </script>
-</body>
+<!-- AFUQ_OFFICIAL_PREPARATIONS_2026_2027_START --><style id="afuq-official-prep-style">
+#afuq-official-preps{direction:rtl;font-family:Tahoma,Arial,sans-serif;background:#f4f8f8;color:#17323a;padding:16px;min-height:80vh}
+#afuq-official-preps .afuq-prep-shell{max-width:1180px;margin:auto}
+#afuq-official-preps .afuq-prep-head{background:linear-gradient(135deg,#0f766e,#155e75);color:white;padding:18px;border-radius:18px 18px 0 0;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+#afuq-official-preps h2{margin:0}.afuq-prep-count{background:#fff;color:#0f5d58;padding:8px 12px;border-radius:999px;font-weight:700}
+#afuq-official-preps .afuq-prep-controls{display:flex;gap:8px;flex-wrap:wrap;padding:12px;background:#e9f6f5;border:1px solid #cfe4e2;border-top:0}
+#afuq-official-preps select,#afuq-official-preps button{font:inherit;border:1px solid #b8d6d3;border-radius:10px;padding:8px 10px;background:#fff;color:#17323a}
+#afuq-official-preps .afuq-prep-card{display:none;background:#fff;border:1px solid #dbe8e7;border-radius:0 0 18px 18px;padding:16px;box-shadow:0 8px 24px #0001}.afuq-prep-card.active{display:block}
+#afuq-official-preps .afuq-card-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;border-bottom:2px solid #e5eeee;padding-bottom:12px;margin-bottom:14px}.afuq-week,.afuq-card-meta{color:#617176;font-size:13px}
+#afuq-official-preps .afuq-topic-heading{background:#eef8f7;padding:9px 12px;border-right:4px solid #0f766e;border-radius:9px}
+#afuq-official-preps .afuq-prep-section,#afuq-official-preps .noor-section,#afuq-official-preps .sec,#afuq-official-preps .section{border:1px solid #dfe8e7;border-radius:12px;padding:12px;margin:10px 0;background:#fff}
+#afuq-official-preps .afuq-sec-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.afuq-sec-head h3{margin:0}.afuq-copy-sec,.afuq-copy-all{cursor:pointer}
+#afuq-original-reference{max-width:1180px;margin:14px auto;direction:rtl;font-family:Tahoma,Arial,sans-serif}#afuq-original-reference>summary{cursor:pointer;background:#fff8e8;border:1px solid #ecdca9;border-radius:12px;padding:10px 14px;font-weight:700}
+@media(max-width:700px){#afuq-official-preps{padding:8px}.afuq-card-head{flex-direction:column}.afuq-prep-controls>*{flex:1 1 auto}}
+</style><script>(function browserRuntime(cfg){
+  function norm(s){
+    return String(s||'').normalize('NFKC')
+      .replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي')
+      .replace(/[\u064B-\u065F\u0670]/g,'')
+      .replace(/[^\p{L}\p{N}]+/gu,' ').trim().toLowerCase();
+  }
+  function esc(s){return String(s??'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function asHtml(v){
+    if(v==null)return '';
+    if(Array.isArray(v))return '<ul>'+v.map(function(x){return '<li>'+esc(typeof x==='string'?x:JSON.stringify(x))+'</li>';}).join('')+'</ul>';
+    if(typeof v==='object')return '<pre>'+esc(JSON.stringify(v,null,2))+'</pre>';
+    return '<p>'+esc(String(v)).replace(/\n/g,'<br>')+'</p>';
+  }
+  function dataHtml(src){
+    var d=src.data||{}, p=src.parent||{};
+    var blocks=[];
+    if(Array.isArray(d.sections)){
+      d.sections.forEach(function(s){if(s&&s.label)blocks.push([s.label,s.value]);});
+    } else if(Array.isArray(p.sections) && d===p){
+      p.sections.forEach(function(s){if(s&&s.label)blocks.push([s.label,s.value]);});
+    } else {
+      var map=[
+        ['المخرجات التعليمية',d.outcomes||d.objectives||p.outcomes],
+        ['المفاهيم',d.concepts||d.terms||p.concepts],
+        ['الاستراتيجيات وطرق التدريس',d.strategies||p.strategies],
+        ['التهيئة والتعلم القبلي',d.prior||d.intro||d.warmup||p.prior||p.intro],
+        ['إجراءات سير الدرس',d.procedures||d.steps||d.activities||p.procedures||p.steps],
+        ['التقويم التكويني',d.formative||d.formativeAssessment||p.formative],
+        ['التقويم الختامي',d.final||d.summative||d.finalAssessment||p.final],
+        ['الواجب المنزلي',d.homework||p.homework],
+        ['الدعم والإثراء',d.support||d.enrichment||p.support||p.enrichment]
+      ];
+      if(d.focus)blocks.push(['محور الحصة',d.focus]);
+      map.forEach(function(x){if(x[1]!=null && x[1]!=='' && !(Array.isArray(x[1])&&x[1].length===0))blocks.push(x);});
+    }
+    return blocks.map(function(b){return '<section class="afuq-prep-section"><div class="afuq-sec-head"><h3>'+esc(b[0])+'</h3><button type="button" class="afuq-copy-sec">نسخ</button></div><div class="afuq-sec-body">'+asHtml(b[1])+'</div></section>';}).join('');
+  }
+  function domHtml(src){
+    var n=src.node.cloneNode(true);
+    n.querySelectorAll('script,style,nav,.lesson-actions,.actions').forEach(function(x){x.remove();});
+    n.querySelectorAll('button').forEach(function(x){x.remove();});
+    n.querySelectorAll('[id]').forEach(function(x){x.removeAttribute('id');});
+    n.querySelectorAll('*').forEach(function(x){
+      Array.from(x.attributes||[]).forEach(function(a){if(/^on/i.test(a.name))x.removeAttribute(a.name);});
+      var t=(x.textContent||'').trim();
+      if(t.length<110 && /الحصة\s*[٠-٩0-9]+\s*من\s*[٠-٩0-9]+/.test(t))x.remove();
+    });
+    var sections=n.querySelectorAll('section,.noor-section,.sec,.section');
+    sections.forEach(function(s){
+      if(s.closest('#afuq-official-preps'))return;
+      var h=s.querySelector('h3,h4');
+      if(h && !s.querySelector('.afuq-copy-sec')){
+        var head=document.createElement('div'); head.className='afuq-sec-head';
+        h.parentNode.insertBefore(head,h); head.appendChild(h);
+        var b=document.createElement('button'); b.type='button'; b.className='afuq-copy-sec'; b.textContent='نسخ'; head.appendChild(b);
+      }
+    });
+    return n.innerHTML;
+  }
+  function collectStructured(){
+    var roots=[];
+    try{if(typeof lessons!=='undefined')roots.push(lessons);}catch(e){}
+    try{if(typeof DATA!=='undefined')roots.push(DATA);}catch(e){}
+    try{if(typeof lessonData!=='undefined')roots.push(lessonData);}catch(e){}
+    try{if(typeof preparations!=='undefined')roots.push(preparations);}catch(e){}
+    try{if(typeof courseData!=='undefined')roots.push(courseData);}catch(e){}
+    try{if(typeof data!=='undefined')roots.push(data);}catch(e){}
+    var out=[], seen=new WeakSet();
+    function walk(o,depth,parent){
+      if(o==null||depth>7)return;
+      if(Array.isArray(o)){o.forEach(function(x){walk(x,depth+1,parent);});return;}
+      if(typeof o!=='object')return;
+      if(seen.has(o))return; seen.add(o);
+      var title=o.title||o.name||o.topic||o.lessonTitle||'';
+      if(title && Array.isArray(o.sessions)){
+        o.sessions.forEach(function(s){out.push({kind:'data',title:title,sub:(s&&s.title)||'',data:s||{},parent:o});});
+      } else if(title && (Array.isArray(o.sections)||o.outcomes||o.objectives||o.concepts||o.procedures||o.steps||o.formative||o.homework)){
+        out.push({kind:'data',title:title,sub:o.subtitle||'',data:o,parent:parent||o});
+      }
+      Object.keys(o).forEach(function(k){
+        if(['sessions','sections'].indexOf(k)>=0)return;
+        var v=o[k];
+        if(v && typeof v==='object')walk(v,depth+1,o);
+      });
+    }
+    roots.forEach(function(r){walk(r,0,null);});
+    return out;
+  }
+  function collectDom(){
+    var sels=['article.lesson-card','article','.lesson-card','.prep-card','.lesson','.lesson-content','.card[data-lesson]'];
+    var set=new Set(), out=[];
+    sels.forEach(function(sel){document.querySelectorAll(sel).forEach(function(n){if(!n.closest('#afuq-official-preps')&&!n.closest('#afuq-official-plan'))set.add(n);});});
+    set.forEach(function(n){
+      var tEl=n.querySelector('h2,h3,.lesson-title,.title');
+      var title=(n.dataset&& (n.dataset.topic||n.dataset.title)) || (tEl&&tEl.textContent)||'';
+      if(title && (n.textContent||'').trim().length>120)out.push({kind:'dom',title:title,node:n});
+    });
+    return out;
+  }
+  function score(topic,s){
+    var a=norm(topic), b=norm((s.title||'')+' '+(s.sub||''));
+    if(!a||!b)return 0;
+    if(a===b)return 100;
+    if(b.indexOf(a)>=0||a.indexOf(b)>=0)return 85;
+    var A=a.split(' ').filter(Boolean), B=b.split(' ').filter(Boolean), hit=0;
+    A.forEach(function(w){if(B.some(function(v){return v===w || (w.length>=4&&v.indexOf(w.slice(0,4))===0) || (v.length>=4&&w.indexOf(v.slice(0,4))===0);})){hit++;}});
+    return 60*hit/Math.max(1,A.length);
+  }
+  function bestSources(topic,sources){
+    return sources.map(function(s){return {s:s,z:score(topic,s)};}).filter(function(x){return x.z>=28;}).sort(function(a,b){return b.z-a.z;}).map(function(x){return x.s;});
+  }
+  function groupWeek(topics,n,sources){
+    var groups=Array.from({length:n},function(){return [];});
+    if(topics.length>=n){
+      topics.forEach(function(t,i){groups[Math.min(n-1,Math.floor(i*n/topics.length))].push(t);});
+      return groups;
+    }
+    var weights=topics.map(function(t){return Math.max(1,bestSources(t,sources).length);});
+    var counts=topics.map(function(){return 1;}), remain=n-topics.length;
+    while(remain>0){
+      var best=0,bestVal=-1;
+      for(var i=0;i<topics.length;i++){var v=weights[i]/(counts[i]+0.35);if(v>bestVal){bestVal=v;best=i;}}
+      counts[best]++; remain--;
+    }
+    var g=0;
+    topics.forEach(function(t,i){for(var j=0;j<counts[i];j++)groups[g++].push(t);});
+    return groups;
+  }
+  function build(){
+    if(document.getElementById('afuq-official-preps'))return;
+    var structured=collectStructured(), dom=collectDom();
+    var sources=structured.length?structured.concat(dom):dom;
+    var root=document.createElement('section'); root.id='afuq-official-preps';
+    var plan=document.getElementById('afuq-official-plan');
+    if(plan&&plan.parentNode)plan.parentNode.insertBefore(root,plan.nextSibling); else document.body.insertBefore(root,document.body.firstChild);
+    root.innerHTML='<div class="afuq-prep-shell"><div class="afuq-prep-head"><div><h2>التحاضير الفعلية وفق النشرة التوجيهية ٢٠٢٦/٢٠٢٧</h2><div class="afuq-prep-sub">'+esc(cfg.label)+' — الفصل الدراسي الأول</div></div><div id="afuq-prep-count" class="afuq-prep-count"></div></div><div class="afuq-prep-controls">'+(cfg.p1!==cfg.p2?'<label>نوع المدرسة <select id="afuq-prep-mode"><option value="p1">مدارس الفترة الواحدة</option><option value="p2">مدارس الفترتين</option></select></label>':'')+'<select id="afuq-prep-jump"></select><button type="button" id="afuq-prep-prev">السابق</button><button type="button" id="afuq-prep-next">التالي</button><button type="button" id="afuq-prep-full">ملء الشاشة</button></div><div id="afuq-prep-cards"></div></div>';
+    var modeSel=document.getElementById('afuq-prep-mode'), jump=document.getElementById('afuq-prep-jump'), cards=document.getElementById('afuq-prep-cards'), count=document.getElementById('afuq-prep-count');
+    var mode=cfg.p1===cfg.p2?'p1':(localStorage.getItem('afuqScienceSchoolMode')||'p1'), active=0, sessions=[];
+    function render(){
+      if(modeSel){mode=modeSel.value;localStorage.setItem('afuqScienceSchoolMode',mode);}
+      sessions=[]; var serial=0;
+      cfg.weeks.forEach(function(w,wi){
+        var n=mode==='p2'?cfg.p2:cfg.p1, groups=groupWeek(w,n,sources);
+        groups.forEach(function(group,si){sessions.push({serial:++serial,week:wi+1,date:(cfg.dates&&cfg.dates[wi])||'',topics:group,weekSession:si+1,weekTotal:n});});
+      });
+      if(active>=sessions.length)active=0;
+      count.textContent='عدد التحاضير الفعلي: '+sessions.length+' حصة';
+      jump.innerHTML=sessions.map(function(s,i){return '<option value="'+i+'">الحصة '+(i+1)+' — '+esc(s.topics.join(' + '))+'</option>';}).join('');
+      cards.innerHTML='';
+      sessions.forEach(function(s,i){
+        var card=document.createElement('article'); card.className='afuq-prep-card'+(i===active?' active':'');
+        var body='';
+        s.topics.forEach(function(topic,ti){
+          var bs=bestSources(topic,sources), src=bs[(s.weekSession-1)%Math.max(1,bs.length)];
+          body+='<div class="afuq-topic-source"><h3 class="afuq-topic-heading">'+esc(topic)+'</h3>';
+          if(src)body+=(src.kind==='dom'?domHtml(src):dataHtml(src));
+          else body+='<section class="afuq-prep-section"><div class="afuq-sec-head"><h3>تنفيذ الحصة</h3><button type="button" class="afuq-copy-sec">نسخ</button></div><div class="afuq-sec-body"><p>يُنفذ موضوع «'+esc(topic)+'» وفق محتواه الموجود في التحضير الأصلي ودليل المعلم، ضمن الحصة المحددة في النشرة التوجيهية.</p></div></section>';
+          body+='</div>';
+        });
+        card.innerHTML='<header class="afuq-card-head"><div><div class="afuq-week">الأسبوع '+s.week+' — '+esc(s.date)+'</div><h2>الحصة '+s.serial+' — '+esc(s.topics.join(' + '))+'</h2><div class="afuq-card-meta">الحصة '+s.weekSession+' من '+s.weekTotal+' في هذا الأسبوع • ٤٠ دقيقة</div></div><button type="button" class="afuq-copy-all">نسخ التحضير كاملًا</button></header><div class="afuq-card-body">'+body+'</div>';
+        cards.appendChild(card);
+      });
+      jump.value=String(active); bindCopies(); show(active);
+      var other=document.getElementById('afuq-school-mode'); if(other&&other.value!==mode){other.value=mode;other.dispatchEvent(new Event('change'));}
+    }
+    function show(i){active=Math.max(0,Math.min(sessions.length-1,i));cards.querySelectorAll('.afuq-prep-card').forEach(function(c,j){c.classList.toggle('active',j===active);});jump.value=String(active);root.scrollIntoView({behavior:'smooth',block:'start'});}
+    function copyText(el,btn){navigator.clipboard.writeText(el.innerText).then(function(){var old=btn.textContent;btn.textContent='تم النسخ';setTimeout(function(){btn.textContent=old;},1200);});}
+    function bindCopies(){
+      cards.querySelectorAll('.afuq-copy-all').forEach(function(b){b.onclick=function(){copyText(b.closest('.afuq-prep-card'),b);};});
+      cards.querySelectorAll('.afuq-copy-sec').forEach(function(b){b.onclick=function(){copyText(b.closest('section'),b);};});
+    }
+    if(modeSel){modeSel.value=mode;modeSel.onchange=function(){active=0;render();};}
+    jump.onchange=function(){show(+jump.value);};
+    document.getElementById('afuq-prep-prev').onclick=function(){show((active-1+sessions.length)%sessions.length);};
+    document.getElementById('afuq-prep-next').onclick=function(){show((active+1)%sessions.length);};
+    document.getElementById('afuq-prep-full').onclick=function(){if(!document.fullscreenElement)root.requestFullscreen&&root.requestFullscreen();else document.exitFullscreen&&document.exitFullscreen();};
+    var planSel=document.getElementById('afuq-school-mode'); if(planSel)planSel.addEventListener('change',function(){if(modeSel){mode=planSel.value;modeSel.value=mode;active=0;render();}});
+    render();
+    var old=document.createElement('details'); old.id='afuq-original-reference'; old.innerHTML='<summary>فتح المحتوى الأصلي المرجعي قبل إعادة التوزيع</summary><div id="afuq-original-holder"></div>';
+    root.parentNode.insertBefore(old,root.nextSibling); var holder=old.querySelector('#afuq-original-holder');
+    Array.from(document.body.children).forEach(function(x){if(x===root||x===plan||x===old||x.tagName==='SCRIPT'||x.tagName==='STYLE')return;holder.appendChild(x);});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(build,0);});else setTimeout(build,0);
+})({"label":"الصف السابع — العلوم","p1":6,"p2":6,"dates":["٦–١٠ سبتمبر ٢٠٢٦","١٣–١٧ سبتمبر ٢٠٢٦","٢٠–٢٤ سبتمبر ٢٠٢٦","٢٧ سبتمبر–١ أكتوبر ٢٠٢٦","٤–٨ أكتوبر ٢٠٢٦","١١–١٥ أكتوبر ٢٠٢٦","١٨–٢٢ أكتوبر ٢٠٢٦","٢٥–٢٩ أكتوبر ٢٠٢٦","١–٥ نوفمبر ٢٠٢٦","٨–١٢ نوفمبر ٢٠٢٦","١٥–١٩ نوفمبر ٢٠٢٦","٢٢–٢٦ نوفمبر ٢٠٢٦","٢٩ نوفمبر–٣ ديسمبر ٢٠٢٦","٦–١٠ ديسمبر ٢٠٢٦","١٣–١٧ ديسمبر ٢٠٢٦"],"weeks":[["أعضاء النبات","الأزهار","التلقيح","الإخصاب"],["الثمار","أجهزة جسم الإنسان","الهيكل العظمي للإنسان","المفاصل"],["العضلات","دراسة جسم الإنسان","أسئلة نهاية الوحدة","المواد الصلبة والسائلة والغازية"],["نظرية الجزيئات","تغير الحالة","تفسير تغيرات الحالة","الانتشار"],["استقصاء الانتشار","ضغط الغاز","أسئلة نهاية الوحدة"],["استخدام الطاقة","المخازن الكيميائية للطاقة"],["مخازن أخرى للطاقة","طاقة الحركة","الطاقة الحرارية"],["نقل الطاقة","توصيل الحرارة","الحمل الحراري","الإشعاع"],["الأشكال المتغيرة للطاقة","حفظ الطاقة","كيف نستخدم الطاقة؟","الوقود الأحفوري"],["مصادر الطاقة المتجددة وغير المتجددة","أسئلة نهاية الوحدة","خصائص الكائنات الحية","الكائنات الدقيقة"],["الكائنات الدقيقة والتحلل","الكائنات الدقيقة والغذاء","الكائنات الدقيقة والأمراض","الخلايا النباتية"],["الخلايا الحيوانية","الخلايا والأنسجة والأعضاء","أسئلة نهاية الوحدة","الصخور والمعادن والتربة"],["التربة","الصخور النارية","الصخور المتحولة","الصخور الرسوبية"],["الأحافير","السجل الأحفوري","بنية الأرض وعمرها","المقياس الزمني الجيولوجي","أسئلة نهاية الوحدة"],["الليل والنهار","السماء ذات النجوم","الكواكب المتحركة","رؤية النجوم والكواكب","ثورة في علم الفلك","400 سنة من علم الفلك","رحلة إلى الفضاء (للمطالعة)"]]});</script><!-- AFUQ_OFFICIAL_PREPARATIONS_2026_2027_END --></body>
 </html>
