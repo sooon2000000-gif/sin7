@@ -2146,7 +2146,7 @@ const saved=Number(localStorage.getItem('noorScience7Lesson'));if(Number.isInteg
 #afuq-official-preps h2{margin:0}.afuq-prep-count{background:#fff;color:#0f5d58;padding:8px 12px;border-radius:999px;font-weight:700}
 #afuq-official-preps .afuq-prep-controls{display:flex;gap:8px;flex-wrap:wrap;padding:12px;background:#e9f6f5;border:1px solid #cfe4e2;border-top:0}
 #afuq-official-preps select,#afuq-official-preps button{font:inherit;border:1px solid #b8d6d3;border-radius:10px;padding:8px 10px;background:#fff;color:#17323a}
-#afuq-official-preps .afuq-prep-card{display:none;background:#fff;border:1px solid #dbe8e7;border-radius:0 0 18px 18px;padding:16px;box-shadow:0 8px 24px #0001}.afuq-prep-card.active{display:block}
+#afuq-official-preps .afuq-prep-card{display:none;background:#fff;border:1px solid #dbe8e7;border-radius:0 0 18px 18px;padding:16px;box-shadow:0 8px 24px #0001}#afuq-official-preps .afuq-prep-card.active{display:block}
 #afuq-official-preps .afuq-card-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;border-bottom:2px solid #e5eeee;padding-bottom:12px;margin-bottom:14px}.afuq-week,.afuq-card-meta{color:#617176;font-size:13px}
 #afuq-official-preps .afuq-topic-heading{background:#eef8f7;padding:9px 12px;border-right:4px solid #0f766e;border-radius:9px}
 #afuq-official-preps .afuq-prep-section,#afuq-official-preps .noor-section,#afuq-official-preps .sec,#afuq-official-preps .section{border:1px solid #dfe8e7;border-radius:12px;padding:12px;margin:10px 0;background:#fff}
@@ -2319,7 +2319,7 @@ const saved=Number(localStorage.getItem('noorScience7Lesson'));if(Number.isInteg
       jump.value=String(active); bindCopies(); show(active);
       var other=document.getElementById('afuq-school-mode'); if(other&&other.value!==mode){other.value=mode;other.dispatchEvent(new Event('change'));}
     }
-    function show(i){active=Math.max(0,Math.min(sessions.length-1,i));cards.querySelectorAll('.afuq-prep-card').forEach(function(c,j){c.classList.toggle('active',j===active);});jump.value=String(active);root.scrollIntoView({behavior:'smooth',block:'start'});}
+    function show(i){active=Math.max(0,Math.min(sessions.length-1,i));cards.querySelectorAll('.afuq-prep-card').forEach(function(c,j){var on=j===active;c.classList.toggle('active',on);c.style.display=on?'block':'none';});jump.value=String(active);root.scrollIntoView({behavior:'smooth',block:'start'});}
     function copyText(el,btn){navigator.clipboard.writeText(el.innerText).then(function(){var old=btn.textContent;btn.textContent='تم النسخ';setTimeout(function(){btn.textContent=old;},1200);});}
     function bindCopies(){
       cards.querySelectorAll('.afuq-copy-all').forEach(function(b){b.onclick=function(){copyText(b.closest('.afuq-prep-card'),b);};});
